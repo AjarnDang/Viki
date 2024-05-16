@@ -22,7 +22,7 @@
               <RouterLink to="/" class="nav-link">Home</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/Works" class="nav-link">Weapons</RouterLink>
+              <RouterLink to="/allproduct" class="nav-link">Weapons</RouterLink>
             </li>
             <!-- <li class="nav-item dropdown">
               <a
@@ -44,7 +44,7 @@
               </ul>
             </li> -->
             <li class="nav-item">
-              <RouterLink to="/Bundle" class="nav-link">Bundles</RouterLink>
+              <RouterLink to="/bundle" class="nav-link">Bundles</RouterLink>
             </li>
             <li class="nav-item">
               <a href="https://banny.vercel.app/" target="_blank" class="nav-link">About me</a>
