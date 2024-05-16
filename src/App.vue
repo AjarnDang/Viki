@@ -22,7 +22,7 @@
               <RouterLink to="/" class="nav-link">Home</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/Works" class="nav-link">Works</RouterLink>
+              <RouterLink to="/Works" class="nav-link">Weapons</RouterLink>
             </li>
             <!-- <li class="nav-item dropdown">
               <a
@@ -44,10 +44,10 @@
               </ul>
             </li> -->
             <li class="nav-item">
-              <RouterLink to="/profile" class="nav-link">About me</RouterLink>
+              <RouterLink to="/Bundle" class="nav-link">Bundles</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/shop" class="nav-link">Valorant Store</RouterLink>
+              <RouterLink to="https://banny.vercel.app/" class="nav-link">About me</RouterLink>
             </li>
           </ul>
           <div class="d-flex">
