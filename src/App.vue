@@ -47,7 +47,7 @@
               <RouterLink to="/Bundle" class="nav-link">Bundles</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="https://banny.vercel.app/" class="nav-link">About me</RouterLink>
+              <a href="https://banny.vercel.app/" target="_blank" class="nav-link">About me</a>
             </li>
           </ul>
           <div class="d-flex">
