@@ -1,6 +1,13 @@
 <template>
   <v-container class="my-16">
-    <h2>All you need.</h2>
+
+    
+    <div class="d-flex justify-content-between align-center flex-wrap mb-5">
+      <h2>All you need.</h2>
+      <a href="/" class="text-decoration-none text-white">
+        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Shop
+      </a>
+    </div>
     <div
       class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
     >
@@ -134,6 +141,39 @@
       </v-slide-group>
     </v-sheet>
 
+    <div
+      class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-16 mb-3"
+    >
+      <h5 class="text-primary mb-0">Spectre</h5>
+      <a href="/spectre" class="text-decoration-none text-white">
+        View all <i class="fa-solid fa-arrow-right ml-1"></i>
+      </a>
+    </div>
+
+    <v-sheet
+      class="mx-auto shadow-none mt-5"
+      elevation="8"
+      color="transparent"
+      dark
+    >
+      <v-slide-group v-model="model" active-class="success" show-arrows>
+        <v-slide-item v-for="(info, index) in spectreInfo" :key="index">
+          <v-card :color="dark" class="pa-8 ma-3 bottom-gradient" height="auto" width="300">
+            <v-row class="fill-height" align="center" justify="center">
+              <v-img
+                :src="info.displayIcon"
+                class="w-100 rounded-lg mb-5 mt-3"
+              ></v-img>
+              <v-card-text class="px-0 pb-0 pt-5">
+                <h6 class="mb-0 weapon-name">{{ info.displayName }}</h6>
+                <p class="text-primary">1650 VP</p>
+              </v-card-text>
+            </v-row>
+          </v-card>
+        </v-slide-item>
+      </v-slide-group>
+    </v-sheet>
+
   </v-container>
 </template>
 
@@ -185,6 +225,11 @@ export default {
         .filter((item) => item.displayName.includes("Operator"))
         .slice(0, 10);
     },
+    spectreInfo() {
+      return this.info
+        .filter((item) => item.displayName.includes("Spectre"))
+        .slice(0, 10);
+    },
   },
 };
 </script>
@@ -200,7 +245,8 @@ export default {
 }
 
 .theme--dark.v-sheet {
-    background-color: rgba(255, 70, 85, 0.1);
+    /* background-color: rgba(255, 70, 85, 0.1); */
+    background-color: #212121;
 }
 
 .weapon-name {

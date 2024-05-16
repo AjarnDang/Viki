@@ -405,6 +405,7 @@ export default {
         ...this.premiumBundles.map((item) => item.displayName),
         ...this.deluxeBundles.map((item) => item.displayName),
         ...this.selectBundles.map((item) => item.displayName),
+        ...this.runbackBundles.map((item) => item.displayName),
       ]);
       return this.bundles.filter((item) => !deluxeBundle.has(item.displayName));
     },

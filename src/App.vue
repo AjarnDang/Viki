@@ -36,6 +36,7 @@
                 <li><RouterLink to="/vandal" class="dropdown-item text-white">Vandal</RouterLink></li>
                 <!-- <li><hr class="dropdown-divider" /></li> -->
                 <li><RouterLink to="/phantom" class="dropdown-item  text-white">Phantom</RouterLink></li>
+                <li><RouterLink to="/spectre" class="dropdown-item  text-white">Spectre</RouterLink></li>
                 <li><RouterLink to="/operator" class="dropdown-item  text-white">Operator</RouterLink></li>
               </ul>
             </li>

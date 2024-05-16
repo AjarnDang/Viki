@@ -56,6 +56,11 @@ const routes = [
     component: () => import('../views/Phantom.vue')
   },
   {
+    path: '/spectre',
+    name: 'spectre',
+    component: () => import('../views/Spectre.vue')
+  },
+  {
     path: '/operator',
     name: 'operator',
     component: () => import('../views/Operator.vue')
