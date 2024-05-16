@@ -5,6 +5,11 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 
+import VueSweetalert2 from 'vue-sweetalert2';
+
+import './assets/css/global.css';
+
+Vue.use(VueSweetalert2);
 Vue.config.productionTip = false
 
 new Vue({
