@@ -149,7 +149,7 @@
                   gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0, 1)"
                   height="400px"
                 >
-                  <v-card-title v-text="card.title"></v-card-title>
+                  <v-card-title>{{ card.title }}</v-card-title>
                 </v-img>
               </a>
             </v-card>
@@ -166,7 +166,7 @@
         </div>
         <v-row dense class="mt-5">
           <v-col v-for="card in Bundle" :key="card.title" :cols="card.flex">
-            <v-hover v-slot="{ hover }">
+            <!-- <v-hover v-slot="{ hover }"> -->
               <a :href="card.tagLink" class="text-decoration-none text-white">
               <v-card class="rounded-xl">
                 <v-img
@@ -175,7 +175,7 @@
                   gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.0)"
                   height="400px"
                 >
-                  <v-expand-transition>
+                  <!-- <v-expand-transition>
                     <div
                       v-if="hover"
                       class="d-flex fade-transition darken-2 v-card--reveal text-h3 white--text"
@@ -183,11 +183,11 @@
                     >
                       {{ card.title }}
                     </div>
-                  </v-expand-transition>
+                  </v-expand-transition> -->
                 </v-img>
               </v-card>
             </a>
-            </v-hover>
+            <!-- </v-hover> -->
           </v-col>
         </v-row>
       </div>
