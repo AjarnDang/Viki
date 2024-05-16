@@ -21,10 +21,7 @@
             <li class="nav-item">
               <RouterLink to="/" class="nav-link">Home</RouterLink>
             </li>
-            <li class="nav-item">
-              <RouterLink to="/allproduct" class="nav-link">Weapons</RouterLink>
-            </li>
-            <!-- <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -32,28 +29,34 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+                Weapons
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
+                <li><RouterLink to="/allproduct" class="dropdown-item text-white">All Weapons</RouterLink></li>
+                <li><RouterLink to="/vandal" class="dropdown-item text-white">Vandal</RouterLink></li>
+                <!-- <li><hr class="dropdown-divider" /></li> -->
+                <li><RouterLink to="/phantom" class="dropdown-item  text-white">Phantom</RouterLink></li>
+                <li><RouterLink to="/operator" class="dropdown-item  text-white">Operator</RouterLink></li>
               </ul>
-            </li> -->
+            </li>
             <li class="nav-item">
               <RouterLink to="/bundle" class="nav-link">Bundles</RouterLink>
             </li>
             <li class="nav-item">
-              <a href="https://banny.vercel.app/" target="_blank" class="nav-link">About me</a>
+              <a
+                href="https://banny.vercel.app/"
+                target="_blank"
+                class="nav-link"
+                >About me
+                <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i
+              ></a>
             </li>
           </ul>
           <div class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <RouterLink to="/contact"
+                <RouterLink
+                  to="/contact"
                   class="nav-link btn btn-outline-primary"
                   >Contact me</RouterLink
                 >
@@ -164,7 +167,8 @@ nav li.router-link-exact-active {
   cursor: pointer;
 }
 
-.v-application ul, .v-application ol {
+.v-application ul,
+.v-application ol {
   padding-left: 0;
 }
 </style>

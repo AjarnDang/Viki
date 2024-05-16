@@ -182,6 +182,14 @@ a.text-primary:hover {
   color: var(--white);
 }
 
+.dropdown-menu {
+  background-color: var(--text);
+}
+
+.dropdown-menu li a:hover {
+  background-color: transparent;
+}
+
 footer a.nav-link,
 footer a.nav-link i {
   color: var(--gray);
@@ -231,6 +239,14 @@ footer a.nav-link i:hover {
 .theme--light.v-divider {
   border-color: var(--light-gray) !important;
 }
+
+.v-tab--active {
+  color: var(--primary) !important;
+}
+.v-tab:before, .v-tabs-slider-wrapper {
+  background-color: var(--primary) !important;
+}
+
 
 /* .theme--light.v-btn.v-btn--has-bg {
   background-color: transparent !important;
