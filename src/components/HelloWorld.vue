@@ -274,6 +274,12 @@ export default {
       ],
 
       tags: [
+      {
+          tagName: "Bundles",
+          tagLink: "/bundle",
+          tagImage:
+            "https://vgraphs.com/images/weapons/valorant-elderflame-vandal-profile-icon.png",
+        },
         {
           tagName: "Vandal",
           tagLink: "/vandal",
@@ -299,10 +305,10 @@ export default {
             "https://vgraphs.com/images/weapons/valorant-operator-profile-icon.png",
         },
         {
-          tagName: "Bundles",
-          tagLink: "/bundle",
+          tagName: "Spectre",
+          tagLink: "/spectre",
           tagImage:
-            "https://vgraphs.com/images/weapons/valorant-elderflame-vandal-profile-icon.png",
+            "https://vgraphs.com/images/weapons/valorant-spectre-profile-icon.png",
         },
       ],
     };
