@@ -1,10 +1,10 @@
 <template>
   <v-container class="my-16">
     <div class="d-flex justify-content-between align-center flex-wrap">
-      <h2 class="mb-0">Operator</h2>
-      <a href="/" class="text-decoration-none text-white">
+      <h2 class="mb-0">{{ weaponName }}</h2>
+      <router-link to="/" class="text-decoration-none text-white">
         <i class="fa-solid fa-arrow-left mr-1"></i> Back to Shop
-      </a>
+      </router-link>
     </div>
     <v-row dense class="mt-5">
       <v-col
@@ -41,46 +41,35 @@
   </v-container>
 </template>
 
-
 <script>
-import axios from "axios";
-
 export default {
+  props: {
+    weaponName: {
+      type: String,
+      required: true,
+    },
+    weaponData: {
+      type: Array,
+      required: true,
+    },
+  },
   data() {
     return {
-      info: [],
       currentPage: 1,
-      itemsPerPage: 21, // Number of items per page
+      itemsPerPage: 10,
     };
   },
   computed: {
     totalPages() {
-      return Math.ceil(this.info.length / this.itemsPerPage);
+      return Math.ceil(this.weaponData.length / this.itemsPerPage);
     },
     paginatedInfo() {
       const start = (this.currentPage - 1) * this.itemsPerPage;
       const end = start + this.itemsPerPage;
-      return this.info.slice(start, end);
+      return this.weaponData.slice(start, end);
     },
-  },
-  mounted() {
-    this.getImage();
   },
   methods: {
-    async getImage() {
-      try {
-        const res = await axios.get(`https://valorant-api.com/v1/weapons/skins`);
-        if (res.data.status === 200) {
-          const filteredData = res.data.data.filter(
-            (item) =>
-              item.displayName.includes("Operator") && item.displayIcon != null
-          );
-          this.info = filteredData; // Set the filtered data
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    },
     updatePage(page) {
       this.currentPage = page;
     },
@@ -89,13 +78,5 @@ export default {
 </script>
 
 <style>
-.v-application .primary {
-  background-color: var(--primary) !important;
-  border-color: var(--primary) !important;
-  color: #eeeeee !important;
-}
-.theme--light.v-pagination .v-pagination__item {
-    background: #eeeeee;
-    color: #212121;
-}
+/* Add your custom styles here */
 </style>

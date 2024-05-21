@@ -191,6 +191,7 @@ a.text-primary:hover {
 }
 
 footer a.nav-link,
+footer span.nav-link,
 footer a.nav-link i {
   color: var(--gray);
 }
@@ -247,6 +248,10 @@ footer a.nav-link i:hover {
   background-color: var(--primary) !important;
 }
 
+.v-application .primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
 
 /* .theme--light.v-btn.v-btn--has-bg {
   background-color: transparent !important;

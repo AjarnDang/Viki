@@ -1,7 +1,7 @@
 <template>
   <v-container class="my-16">
     <div class="d-flex justify-content-end align-center flex-wrap mb-5">
-      <a href="/Shop" class="text-decoration-none text-white">
+      <a href="/" class="text-decoration-none text-white">
         <i class="fa-solid fa-arrow-left mr-1"></i> Back to Shop
       </a>
     </div>

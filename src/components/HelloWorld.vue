@@ -7,75 +7,29 @@
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="https://www.dexerto.com/cdn-image/wp-content/uploads/2024/03/02/Sovereign-2-0-bundle-VALORANT.jpg?width=3840&quality=75&format=auto"
-              class="d-block w-100 carousel-image-2"
-              alt="img-features"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h2>SOUVERIEGN 2.0</h2>
-              <p>
-                Exclusive Bunble including Phantom, Frenzy, Odin, Judge and
-                Blade (Melee)
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2022/01/07/Protocol_Bundle_1920x1080.jpg"
-              class="d-block w-100 carousel-image-2"
-              alt="img-features"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h2>PROTOCOL 781-A</h2>
-              <p>
-                Exclusive Bunble including Phantom, Sheriff, Spectre, Bulldog
-                and Melee
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://www.lapakgaming.com/blog/id-id/wp-content/uploads/2023/12/Valorant-Overdrive.webp"
-              class="d-block w-100 carousel-image-2"
-              alt="img-features"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h2>OVERDRIVE</h2>
-              <p>
-                Exclusive Bunble including Valdal, Sheriff, Stinger, Bucky and
-                Blade (Melee)
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://win.gg/_next/image/?url=https%3A%2F%2Fapi.win.gg%2Fwp-content%2Fuploads%2F2023%2F10%2FF9fPwQmXgAEIpuS-1024x576.jpeg&w=1920&q=75"
-              class="d-block w-100 carousel-image-2"
-              alt="img-features"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h2>VALIANT HERO</h2>
-              <p>
-                Premium Bunble including Valdal, Ghost, Operator, Ares and Wand
-                (Melee)
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2021/04/16/Forsaken_Bundle_1920x1080.jpeg"
-              class="d-block w-100 carousel-image-2"
-              alt="img-features"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h2>Forsaken</h2>
-              <p>
-                Premium Bunble including Valdal, Classic, Operator, Spectre and
-                Dagger (Melee)
-              </p>
-            </div>
+          <div
+            class="carousel-item"
+            :class="{ active: index === 0 }"
+            v-for="(item, index) in premiumBundles"
+            :key="index"
+          >
+            <router-link
+              class="links"
+              :to="{
+                name: 'BundleDetail',
+                params: { displayName: item.displayName },
+              }"
+            >
+              <img
+                :src="item.displayIcon"
+                class="d-block w-100 carousel-image-2"
+                alt="img-features"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h2>{{ item.displayName }}</h2>
+                <p>Exclusive {{ item.description }} Bundle</p>
+              </div>
+            </router-link>
           </div>
         </div>
         <button
@@ -106,26 +60,29 @@
       >
         <v-slide-group v-model="model" active-class="success" show-arrows>
           <v-slide-item v-for="tag in tags" :key="tag">
-            <a :href="tag.tagLink" class="weapons text-white text-decoration-none mx-2">
-            <v-card
-              :color="dark"
-              class="pa-2 ma-3 bottom-gradient"
-              height="auto"
-              width="250"
+            <a
+              :href="tag.tagLink"
+              class="weapons text-white text-decoration-none mx-2"
             >
-              <v-row class="fill-height" align="center" justify="center">
-                <v-img
-                  :src="tag.tagImage"
-                  class="w-100 rounded-lg mt-3"
-                ></v-img>
-                <v-card-text class="px-0 pb-0 text-center">
-                  <p class="mb-0 weapon-name">
-                    {{ tag.tagName }}
-                  </p>
-                </v-card-text>
-              </v-row>
-            </v-card>
-          </a>
+              <v-card
+                :color="dark"
+                class="pa-2 ma-3 bottom-gradient"
+                height="auto"
+                width="250"
+              >
+                <v-row class="fill-height" align="center" justify="center">
+                  <v-img
+                    :src="tag.tagImage"
+                    class="w-100 rounded-lg mt-3"
+                  ></v-img>
+                  <v-card-text class="px-0 pb-0 text-center">
+                    <p class="mb-0 weapon-name">
+                      {{ tag.tagName }}
+                    </p>
+                  </v-card-text>
+                </v-row>
+              </v-card>
+            </a>
           </v-slide-item>
         </v-slide-group>
       </v-sheet>
@@ -165,29 +122,53 @@
           </a>
         </div>
         <v-row dense class="mt-5">
-          <v-col v-for="card in Bundle" :key="card.title" :cols="card.flex">
-            <!-- <v-hover v-slot="{ hover }"> -->
-              <a :href="card.tagLink" class="text-decoration-none text-white">
+          <v-col v-if="randomBundle" :key="randomBundle.uuid" :cols="12">
+            <router-link
+              :to="{
+                name: 'BundleDetail',
+                params: { displayName: randomBundle.displayName },
+              }"
+              class="text-decoration-none text-white bundle-card"
+            >
               <v-card class="rounded-xl">
                 <v-img
-                  :src="card.src"
+                  :src="randomBundle.displayIcon"
                   class="white--text align-end rounded-xl"
                   gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.0)"
                   height="400px"
                 >
-                  <!-- <v-expand-transition>
-                    <div
-                      v-if="hover"
-                      class="d-flex fade-transition darken-2 v-card--reveal text-h3 white--text"
-                      style="height: 100%"
-                    >
-                      {{ card.title }}
+                  <div class="overlay">
+                    <div class="overlay-text">
+                      {{ randomBundle.displayName }}
                     </div>
-                  </v-expand-transition> -->
+                  </div>
                 </v-img>
               </v-card>
-            </a>
-            <!-- </v-hover> -->
+            </router-link>
+          </v-col>
+          <v-col v-for="item in randomBundles" :key="item.uuid" :cols="6">
+            <router-link
+              :to="{
+                name: 'BundleDetail',
+                params: { displayName: item.displayName },
+              }"
+              class="text-decoration-none text-white bundle-card"
+            >
+              <v-card class="rounded-xl">
+                <v-img
+                  :src="item.displayIcon"
+                  class="white--text align-end rounded-xl"
+                  gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.0)"
+                  height="400px"
+                >
+                  <div class="overlay">
+                    <div class="overlay-text">
+                      {{ item.displayName }}
+                    </div>
+                  </div>
+                </v-img>
+              </v-card>
+            </router-link>
           </v-col>
         </v-row>
       </div>
@@ -224,6 +205,7 @@
 
 <script>
 import NewArrival from "../components/NewArrival.vue";
+import axios from "axios";
 
 export default {
   components: {
@@ -232,6 +214,11 @@ export default {
 
   data() {
     return {
+      bundles: [],
+      skins: [],
+      contentTiers: [],
+      selectedBundle: null,
+
       Weapon: [
         {
           title: "Vandal",
@@ -272,9 +259,8 @@ export default {
           flex: 6,
         },
       ],
-
       tags: [
-      {
+        {
           tagName: "Bundles",
           tagLink: "/bundle",
           tagImage:
@@ -313,6 +299,105 @@ export default {
       ],
     };
   },
+  mounted() {
+    this.fetchData();
+  },
+  methods: {
+    async fetchData() {
+      try {
+        const [bundleRes, skinRes, tierRes] = await Promise.all([
+          axios.get("https://valorant-api.com/v1/bundles"),
+          axios.get("https://valorant-api.com/v1/weapons/skins"),
+          axios.get("https://valorant-api.com/v1/contenttiers"),
+        ]);
+
+        if (
+          bundleRes.data.status === 200 &&
+          skinRes.data.status === 200 &&
+          tierRes.data.status === 200
+        ) {
+          this.bundles = bundleRes.data.data;
+          this.skins = skinRes.data.data;
+          this.contentTiers = tierRes.data.data;
+          this.selectedBundle = this.randomExclusiveBundle();
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    },
+    randomExclusiveBundle() {
+      const randomIndex = Math.floor(
+        Math.random() * this.exclusiveBundles.length
+      );
+      return this.exclusiveBundles[randomIndex];
+    },
+    randomExclusiveBundles(excludeItem) {
+      const filteredBundles = this.exclusiveBundles.filter(
+        (bundle) => bundle.displayName !== excludeItem.displayName
+      );
+      const shuffledBundles = filteredBundles.sort(() => 0.5 - Math.random());
+      return shuffledBundles.slice(0, 2);
+    },
+  },
+  computed: {
+    exclusiveBundles() {
+      return this.bundles.filter(
+        (item) =>
+          item.displayName.includes("Arcane") ||
+          item.displayName.includes("Champions") ||
+          item.displayName.includes("XERØFANG") ||
+          item.displayName.includes("Ignite")
+      );
+    },
+    randomBundle() {
+      return this.selectedBundle;
+    },
+    randomBundles() {
+      return this.randomExclusiveBundles(this.selectedBundle);
+    },
+    premiumBundles() {
+      const premiumBundleName = [
+        "RGX 11z Pro",
+        "Araxys",
+        "Spectrum",
+        "Glitchpop",
+        "ChronoVoid",
+        "Prelude to Chaos",
+        "Radiant Entertainment System",
+        "Gaia's Vengeance",
+        "Elderflame",
+        "Imperium",
+        "Singularity",
+        "Neo Frontier",
+        "Primordium",
+        "Ruination",
+        "Overdrive",
+        "Kuronami",
+        "Sentinels of Light",
+        "Sovereign",
+        "Mystbloom",
+        "BlastX",
+        "Protocol 781-A",
+      ];
+
+      // Filter the bundles to get only the premium bundles
+      const premiumBundles = this.bundles.filter((bundle) =>
+        premiumBundleName.includes(bundle.displayName)
+      );
+
+      // Shuffle the array using the Fisher-Yates algorithm
+      for (let i = premiumBundles.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [premiumBundles[i], premiumBundles[j]] = [
+          premiumBundles[j],
+          premiumBundles[i],
+        ];
+      }
+
+      // Return only the first 5 elements
+      return premiumBundles.slice(0, 5);
+    },
+  },
 };
 </script>
 
@@ -348,11 +433,11 @@ export default {
 
 .weapons:hover {
   background-color: #ff4655;
-  color: #212121 !important
+  color: #212121 !important;
 }
 
 .weapon-name:hover {
-  color: #212121 !important
+  color: #212121 !important;
 }
 
 .v-card--reveal {
@@ -363,5 +448,40 @@ export default {
   opacity: 0.85;
   position: absolute;
   width: 100%;
+}
+
+.bundle-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.bundle-card .v-img {
+  position: relative;
+}
+
+.bundle-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.bundle-card:hover .overlay {
+  opacity: 1;
+}
+
+.bundle-card .overlay-text {
+  color: #ff4655;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 10px;
 }
 </style>

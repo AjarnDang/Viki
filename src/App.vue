@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <RouterLink to="/" class="nav-link">Home</RouterLink>
+              <a href="/" class="nav-link">Home</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -32,16 +32,34 @@
                 Weapons
               </a>
               <ul class="dropdown-menu">
-                <li><RouterLink to="/allproduct" class="dropdown-item text-white">All Weapons</RouterLink></li>
-                <li><RouterLink to="/vandal" class="dropdown-item text-white">Vandal</RouterLink></li>
+                <li>
+                  <a href="/allproduct" class="dropdown-item text-white"
+                    >All Weapons</a
+                  >
+                </li>
+                <li>
+                  <a href="/vandal" class="dropdown-item text-white">Vandal</a>
+                </li>
                 <!-- <li><hr class="dropdown-divider" /></li> -->
-                <li><RouterLink to="/phantom" class="dropdown-item  text-white">Phantom</RouterLink></li>
-                <li><RouterLink to="/spectre" class="dropdown-item  text-white">Spectre</RouterLink></li>
-                <li><RouterLink to="/operator" class="dropdown-item  text-white">Operator</RouterLink></li>
+                <li>
+                  <a href="/phantom" class="dropdown-item text-white"
+                    >Phantom</a
+                  >
+                </li>
+                <li>
+                  <a href="/spectre" class="dropdown-item text-white"
+                    >Spectre</a
+                  >
+                </li>
+                <li>
+                  <a href="/operator" class="dropdown-item text-white"
+                    >Operator</a
+                  >
+                </li>
               </ul>
             </li>
             <li class="nav-item">
-              <RouterLink to="/bundle" class="nav-link">Bundles</RouterLink>
+              <a href="/bundle" class="nav-link">Bundles</a>
             </li>
             <li class="nav-item">
               <a
@@ -56,14 +74,12 @@
           <div class="d-flex">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <RouterLink
-                  to="/contact"
-                  class="nav-link btn btn-outline-primary"
-                  >Contact me</RouterLink
+                <a href="/contact" class="nav-link btn btn-outline-primary"
+                  >Contact me</a
                 >
               </li>
               <!-- <li class="nav-item">
-                <RouterLink to="/support" class="nav-link btn btn-primary ml-lg-2 ml-md-2 mt-md-0 mt-2">Support me</RouterLink>
+                <a href="/support" class="nav-link btn btn-primary ml-lg-2 ml-md-2 mt-md-0 mt-2">Support me</a>
               </li> -->
             </ul>
           </div>
@@ -79,35 +95,42 @@
       <div class="container">
         <div class="d-flex pt-8 pb-10 justify-content-between flex-wrap">
           <div class="mb-3">
-            <p>CONTENT</p>
-            <a href="#" class="nav-link"> Discover </a>
-            <a href="#" class="nav-link"> Poppular Content </a>
-            <a href="#" class="nav-link"> New Trand </a>
-            <a href="#" class="nav-link"> Categories </a>
+            <p>WEAPONS</p>
+            <a href="/vandal" class="nav-link"> Vandal </a>
+            <a href="/phantom" class="nav-link"> Phantom </a>
+            <a href="/operator" class="nav-link"> Operator </a>
+            <a href="/spectre" class="nav-link"> Spectre </a>
           </div>
           <div class="mb-3">
-            <p>INFOMATION</p>
-            <a href="#" class="nav-link"> Pricing </a>
-            <a href="#" class="nav-link"> Sell Content </a>
-            <a href="#" class="nav-link"> Jobs </a>
-            <a href="#" class="nav-link"> Our Guideline </a>
+            <p>BUNDLES</p>
+            <span class="nav-link"> Exlusive </span>
+            <span class="nav-link"> Premium </span>
+            <span class="nav-link"> Deluxe </span>
+            <span class="nav-link"> Select </span>
           </div>
           <div class="mb-3">
-            <p>ABOUT US</p>
-            <a href="#" class="nav-link"> About us </a>
-            <a href="#" class="nav-link"> Privacy Policy </a>
+            <p>ABOUT ME</p>
+            <a
+              href="https://banny.vercel.app/"
+              target="_blank"
+              class="nav-link"
+            >
+              My Website
+            </a>
+            <!-- <a href="#" class="nav-link"> Privacy Policy </a>
             <a href="#" class="nav-link"> User Agreement </a>
-            <a href="#" class="nav-link"> Cookies Policy </a>
-            <a href="#" class="nav-link"> Contact us </a>
+            <a href="#" class="nav-link"> Cookies Policy </a> -->
+            <a href="/contact" class="nav-link"> Contact me </a>
           </div>
           <div class="mb-3">
-            <p>MEDIA & ARTICLES</p>
-            <a href="#" class="nav-link"> News </a>
-            <a href="#" class="nav-link"> Articles </a>
+            <p>MEDIA & DATA</p>
+            <a href="/about" class="nav-link"> About </a>
+            <a href="/api" class="nav-link"> APIs </a>
+            <!-- <a href="#" class="nav-link"> Articles </a>
             <a href="#" class="nav-link"> Blogs </a>
             <a href="#" class="nav-link"> Annoucements </a>
             <a href="#" class="nav-link"> FAQs </a>
-            <a href="#" class="nav-link"> Manual </a>
+            <a href="#" class="nav-link"> Manual </a> -->
           </div>
           <div class="mb-3">
             <p>SOCIALS</p>
