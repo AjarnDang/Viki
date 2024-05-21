@@ -58,7 +58,12 @@
         color="transparent"
         dark
       >
-        <v-slide-group v-model="model" active-class="success" show-arrows>
+        <v-slide-group
+          v-model="model"
+          active-class="success"
+          show-arrows
+          class="mt-5 mb-16"
+        >
           <v-slide-item v-for="tag in tags" :key="tag">
             <a
               :href="tag.tagLink"
@@ -87,7 +92,48 @@
         </v-slide-group>
       </v-sheet>
 
-      <NewArrival class="mt-16" />
+      <div class="mb-16">
+        <div class="d-flex justify-content-between flex-wrap align-end">
+          <div>
+            <h2 class="mb-0">New Arrivals</h2>
+            <p class="mb-0">The best assets for you</p>
+          </div>
+          <a href="/allproduct" class="text-decoration-none text-white">
+            View all <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+        <v-sheet
+          class="mx-auto shadow-none mt-5"
+          elevation="8"
+          color="transparent"
+          dark
+        >
+          <v-slide-group v-model="model" active-class="success" show-arrows>
+            <v-slide-item v-for="(card, index) in randomFilteredSkins" :key="index">
+              <v-card
+                v-if="card.displayIcon"
+                :color="dark"
+                class="pa-8 ma-3 bottom-gradient bg-text"
+                height="auto"
+                width="300"
+              >
+                <v-row class="fill-height" align="center" justify="center">
+                  <v-img
+                    :src="card.displayIcon"
+                    class="w-100 rounded-lg mb-5 mt-3"
+                  ></v-img>
+                  <v-card-text class="px-0 pb-0 pt-5">
+                    <h6 class="mb-0 weapon-name">{{ card.displayName }}</h6>
+                    <p class="text-primary">1650 VP</p>
+                  </v-card-text>
+                </v-row>
+              </v-card>
+              <div v-else></div>
+            </v-slide-item>
+          </v-slide-group>
+        </v-sheet>
+      </div>
 
       <div class="my-16">
         <div class="d-flex justify-content-between align-center flex-wrap">
@@ -114,7 +160,7 @@
         </v-row>
       </div>
 
-      <div class="my-16">
+      <div class="mt-16">
         <div class="d-flex justify-content-between align-center flex-wrap">
           <h2 class="mb-0">Premium Bundles</h2>
           <a href="/bundle" class="text-decoration-none text-white">
@@ -204,12 +250,12 @@
 </template>
 
 <script>
-import NewArrival from "../components/NewArrival.vue";
+// import NewArrival from "../components/NewArrival.vue";
 import axios from "axios";
 
 export default {
   components: {
-    NewArrival,
+    // NewArrival,
   },
 
   data() {
@@ -217,6 +263,7 @@ export default {
       bundles: [],
       skins: [],
       contentTiers: [],
+      randomFilteredSkins: [],
       selectedBundle: null,
 
       Weapon: [
@@ -237,26 +284,6 @@ export default {
           tagLink: "/operator",
           src: "https://assets.gamearena.gg/wp-content/uploads/2023/10/26132843/Cypher-mirando.jpg",
           flex: 4,
-        },
-      ],
-      Bundle: [
-        {
-          title: "Champion 2023 Bundle",
-          tagLink: "/bundle",
-          src: "https://news.codashop.com/ph/wp-content/uploads/sites/5/2023/08/Champions-2023-Bundle.jpg",
-          flex: 12,
-        },
-        {
-          title: "Reaver Bundle",
-          tagLink: "/bundle",
-          src: "https://staticg.sportskeeda.com/editor/2022/08/59f9b-16593284270850-1920.jpg",
-          flex: 6,
-        },
-        {
-          title: "Araxys Bundle",
-          tagLink: "/bundle",
-          src: "https://cdn.vcgamers.com/news/wp-content/uploads/2023/01/Bundle-Baru-Valorant.png",
-          flex: 6,
         },
       ],
       tags: [
@@ -320,10 +347,21 @@ export default {
           this.skins = skinRes.data.data;
           this.contentTiers = tierRes.data.data;
           this.selectedBundle = this.randomExclusiveBundle();
+          const filteredSkins = this.filterSkinsByKeywords(this.skins, ["Vandal", "Phantom", "Operator"]);
+          this.randomFilteredSkins = this.getRandomItems(filteredSkins, 5);  //number of items
         }
       } catch (e) {
         console.log(e);
       }
+    },
+    filterSkinsByKeywords(skins, keywords) {
+      return skins.filter(skin =>
+        keywords.some(keyword => skin.displayName.includes(keyword))
+      );
+    },
+    getRandomItems(array, num) {
+      const shuffled = array.sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, num);
     },
     randomExclusiveBundle() {
       const randomIndex = Math.floor(
@@ -411,8 +449,12 @@ export default {
 }
 
 .theme--dark.v-sheet {
-  background: transparent !important;
+  background: transparent;
   box-shadow: none !important;
+}
+
+.bg-text {
+  background-color: #212121 !important;
 }
 
 .theme--light.v-chip:not(.v-chip--active) {

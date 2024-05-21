@@ -1,7 +1,5 @@
 <template>
   <v-container class="my-16">
-
-    
     <div class="d-flex justify-content-between align-center flex-wrap mb-5">
       <h2>All you need.</h2>
       <a href="/" class="text-decoration-none text-white">
@@ -25,7 +23,12 @@
     >
       <v-slide-group v-model="model" active-class="success" show-arrows>
         <v-slide-item v-for="(info, index) in vandalInfo" :key="index">
-          <v-card :color="dark" class="pa-8 ma-3 bottom-gradient" height="auto" width="300">
+          <v-card
+            :color="dark"
+            class="pa-8 ma-3 bottom-gradient"
+            height="auto"
+            width="300"
+          >
             <v-row class="fill-height" align="center" justify="center">
               <v-img
                 :src="info.displayIcon"
@@ -40,7 +43,6 @@
         </v-slide-item>
       </v-slide-group>
     </v-sheet>
-
 
     <div
       class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-16 mb-3"
@@ -59,7 +61,12 @@
     >
       <v-slide-group v-model="model" active-class="success" show-arrows>
         <v-slide-item v-for="(info, index) in odinInfo" :key="index">
-          <v-card :color="dark" class="pa-8 ma-3 bottom-gradient" height="auto" width="300">
+          <v-card
+            :color="dark"
+            class="pa-8 ma-3 bottom-gradient"
+            height="auto"
+            width="300"
+          >
             <v-row class="fill-height" align="center" justify="center">
               <v-img
                 :src="info.displayIcon"
@@ -92,7 +99,12 @@
     >
       <v-slide-group v-model="model" active-class="success" show-arrows>
         <v-slide-item v-for="(info, index) in phantomInfo" :key="index">
-          <v-card :color="dark" class="pa-8 ma-3 bottom-gradient" height="auto" width="300">
+          <v-card
+            :color="dark"
+            class="pa-8 ma-3 bottom-gradient"
+            height="auto"
+            width="300"
+          >
             <v-row class="fill-height" align="center" justify="center">
               <v-img
                 :src="info.displayIcon"
@@ -125,7 +137,12 @@
     >
       <v-slide-group v-model="model" active-class="success" show-arrows>
         <v-slide-item v-for="(info, index) in operatorInfo" :key="index">
-          <v-card :color="dark" class="pa-8 ma-3 bottom-gradient" height="auto" width="300">
+          <v-card
+            :color="dark"
+            class="pa-8 ma-3 bottom-gradient"
+            height="auto"
+            width="300"
+          >
             <v-row class="fill-height" align="center" justify="center">
               <v-img
                 :src="info.displayIcon"
@@ -158,7 +175,12 @@
     >
       <v-slide-group v-model="model" active-class="success" show-arrows>
         <v-slide-item v-for="(info, index) in spectreInfo" :key="index">
-          <v-card :color="dark" class="pa-8 ma-3 bottom-gradient" height="auto" width="300">
+          <v-card
+            :color="dark"
+            class="pa-8 ma-3 bottom-gradient"
+            height="auto"
+            width="300"
+          >
             <v-row class="fill-height" align="center" justify="center">
               <v-img
                 :src="info.displayIcon"
@@ -173,7 +195,6 @@
         </v-slide-item>
       </v-slide-group>
     </v-sheet>
-
   </v-container>
 </template>
 
@@ -245,13 +266,12 @@ export default {
 }
 
 .theme--dark.v-sheet {
-    /* background-color: rgba(255, 70, 85, 0.1); */
-    background-color: #212121;
+  /* background-color: rgba(255, 70, 85, 0.1); */
+  background-color: #212121;
 }
 
 .weapon-name {
-    position: absolute;
-    bottom: 1rem;
+  position: absolute;
+  bottom: 1rem;
 }
-
 </style>

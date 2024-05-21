@@ -65,6 +65,11 @@ const routes = [
     component: () => import('../views/BundleDetail.vue')
   },
   {
+    path: '/weapondetail',
+    name: 'weapondetail',
+    component: () => import('../views/WeaponDetail.vue')
+  },
+  {
     path: '/api',
     name: 'api',
     component: () => import('../views/Api.vue')

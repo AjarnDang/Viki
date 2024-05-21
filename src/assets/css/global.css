@@ -237,6 +237,11 @@ footer a.nav-link i:hover {
   grid-row: 3 / span 2;
 }
 
+.weapon-name {
+  position: absolute;
+  bottom: 1rem;
+}
+
 .theme--light.v-divider {
   border-color: var(--light-gray) !important;
 }
