@@ -54,7 +54,6 @@
 
       <v-sheet
         class="mx-auto shadow-none d-flex justify-content-center mt-5"
-        elevation="8"
         color="transparent"
         dark
       >
@@ -76,12 +75,12 @@
                 width="250"
               >
                 <v-row class="fill-height" align="center" justify="center">
-                  <v-img
+                   <v-img
                     :src="tag.tagImage"
                     class="w-100 rounded-lg mt-3"
                   ></v-img>
                   <v-card-text class="px-0 pb-0 text-center">
-                    <p class="mb-0 weapon-name">
+                    <p class="mb-0">
                       {{ tag.tagName }}
                     </p>
                   </v-card-text>
@@ -110,7 +109,10 @@
           dark
         >
           <v-slide-group v-model="model" active-class="success" show-arrows>
-            <v-slide-item v-for="(card, index) in randomFilteredSkins" :key="index">
+            <v-slide-item
+              v-for="(card, index) in randomFilteredSkins"
+              :key="index"
+            >
               <v-card
                 v-if="card.displayIcon"
                 :color="dark"
@@ -125,7 +127,7 @@
                   ></v-img>
                   <v-card-text class="px-0 pb-0 pt-5">
                     <h6 class="mb-0 weapon-name">{{ card.displayName }}</h6>
-                    <p class="text-primary">1650 VP</p>
+                    <!-- <p class="text-primary">1650 VP</p> -->
                   </v-card-text>
                 </v-row>
               </v-card>
@@ -347,16 +349,20 @@ export default {
           this.skins = skinRes.data.data;
           this.contentTiers = tierRes.data.data;
           this.selectedBundle = this.randomExclusiveBundle();
-          const filteredSkins = this.filterSkinsByKeywords(this.skins, ["Vandal", "Phantom", "Operator"]);
-          this.randomFilteredSkins = this.getRandomItems(filteredSkins, 5);  //number of items
+          const filteredSkins = this.filterSkinsByKeywords(this.skins, [
+            "Vandal",
+            "Phantom",
+            "Operator",
+          ]);
+          this.randomFilteredSkins = this.getRandomItems(filteredSkins, 5); //number of items
         }
       } catch (e) {
         console.log(e);
       }
     },
     filterSkinsByKeywords(skins, keywords) {
-      return skins.filter(skin =>
-        keywords.some(keyword => skin.displayName.includes(keyword))
+      return skins.filter((skin) =>
+        keywords.some((keyword) => skin.displayName.includes(keyword))
       );
     },
     getRandomItems(array, num) {
