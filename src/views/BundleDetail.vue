@@ -4,7 +4,7 @@
       <h2>{{ cleanedDisplayName }}</h2>
       <div>
       <a href="/bundle" class="text-decoration-none text-white">
-        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Home
+        <i class="fa-solid fa-arrow-left mr-1"></i> Back
       </a>
     </div>
     </div>

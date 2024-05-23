@@ -136,29 +136,52 @@
           </div>
           <div class="mb-3">
             <p>SOCIALS</p>
-            <a href="" class="nav-link d-inline">
-              <i class="fa-brands fa-square-facebook fa-2xl mr-2"> </i>
-            </a>
-            <a href="" class="nav-link d-inline">
-              <i class="fa-brands fa-square-x-twitter fa-2xl mr-2"> </i>
-            </a>
-            <a href="" class="nav-link d-inline">
-              <i class="fa-brands fa-square-pinterest fa-2xl mr-2"> </i>
-            </a>
-            <a href="" class="nav-link d-inline">
-              <i class="fa-brands fa-square-instagram fa-2xl mr-2"> </i>
-            </a>
-            <a href="" class="nav-link d-inline">
-              <i class="fa-brands fa-square-youtube fa-2xl mr-2"> </i>
-            </a>
-            <a href="" class="nav-link d-inline">
-              <i class="fa-brands fa-linkedin fa-2xl"> </i>
-            </a>
-
-            <p class="mt-5 mb-3">
-              Get exclusive assets sent straight to your inbox
-            </p>
-            <v-btn class="btn btn-primary px-5">Sign up</v-btn>
+            <div class="d-flex align-center">
+              <a
+                href="https://www.twitch.tv/banny3633"
+                target="_blank"
+                class="nav-link d-inline"
+              >
+                <i class="fa-brands fa-twitch fa-2xl mr-3"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/brandthron44/"
+                target="_blank"
+                class="nav-link d-inline"
+              >
+                <i class="fa-brands fa-instagram fa-2xl mr-3"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/thornthan-jomtharak-b10403279/"
+                target="_blank"
+                class="nav-link d-inline"
+              >
+                <i class="fa-brands fa-linkedin fa-2xl mr-3"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UC8T4F0fNvCg7nKxSbnPKBSg"
+                target="_blank"
+                class="nav-link d-inline"
+              >
+                <i class="fa-brands fa-youtube fa-2xl mr-3"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@banny3633"
+                target="_blank"
+                class="nav-link d-inline"
+              >
+                <i class="fa-brands fa-tiktok fa-2xl mr-3"></i>
+              </a>
+              <a
+                href="https://www.behance.net/torntanjomthar"
+                target="_blank"
+                class="nav-link d-inline"
+              >
+                <i class="fa-brands fa-behance fa-2xl"></i>
+              </a>
+            </div>
+            <p class="mt-5 mb-3">Get in touch with me at your finger tips.</p>
+            <v-btn class="btn btn-primary px-5" href="/contact">Contact</v-btn>
           </div>
         </div>
         <hr />

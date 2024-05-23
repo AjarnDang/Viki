@@ -2,8 +2,8 @@
   <v-container class="my-16">
     <div class="d-flex justify-content-between align-center flex-wrap">
       <h2 class="mb-0">Vandal</h2>
-      <a href="/" class="text-decoration-none text-white">
-        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Home
+      <a href="/allweapon" class="text-decoration-none text-white">
+        <i class="fa-solid fa-arrow-left mr-1"></i> Back 
       </a>
     </div>
     <v-row dense class="mt-5">
