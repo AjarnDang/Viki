@@ -75,7 +75,7 @@
                 width="250"
               >
                 <v-row class="fill-height" align="center" justify="center">
-                   <v-img
+                  <v-img
                     :src="tag.tagImage"
                     class="w-100 rounded-lg mt-3"
                   ></v-img>
@@ -97,7 +97,7 @@
             <h2 class="mb-0">New Arrivals</h2>
             <p class="mb-0">The best assets for you</p>
           </div>
-          <a href="/allproduct" class="text-decoration-none text-white">
+          <a href="/allweapon" class="text-decoration-none text-white">
             View all <i class="fa-solid fa-arrow-right ml-1"></i>
           </a>
         </div>
@@ -140,12 +140,16 @@
       <div class="my-16">
         <div class="d-flex justify-content-between align-center flex-wrap">
           <h2 class="mb-0">Get you favorite skins</h2>
-          <a href="/allproduct" class="text-decoration-none text-white">
+          <a href="/allweapon" class="text-decoration-none text-white">
             View all <i class="fa-solid fa-arrow-right ml-1"></i>
           </a>
         </div>
         <v-row dense class="mt-5">
-          <v-col v-for="card in Weapon" :key="card.title" :cols="card.flex">
+          <v-col
+            v-for="card in randomWeaponCards"
+            :key="card.title"
+            :cols="card.flex"
+          >
             <v-card class="rounded-lg">
               <a :href="card.tagLink" class="text-decoration-none text-white">
                 <v-img
@@ -287,6 +291,18 @@ export default {
           src: "https://assets.gamearena.gg/wp-content/uploads/2023/10/26132843/Cypher-mirando.jpg",
           flex: 4,
         },
+        {
+          title: "Spectre",
+          tagLink: "/spectre",
+          src: "https://www.si.com/esports/.image/t_share/MjAxMDgzMTI3MjE1NDMzNTkz/reynavalorant.jpg",
+          flex: 4,
+        },
+        {
+          title: "Odin",
+          tagLink: "/odin",
+          src: "https://dotesports.com/wp-content/uploads/2022/08/27152130/valorant-best-agents-beginners-kayo.jpg",
+          flex: 4,
+        },
       ],
       tags: [
         {
@@ -384,6 +400,14 @@ export default {
     },
   },
   computed: {
+    randomWeaponCards() {
+      let shuffled = this.Weapon.slice();
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled.slice(0, 3);
+    },
     exclusiveBundles() {
       return this.bundles.filter(
         (item) =>

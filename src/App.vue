@@ -21,7 +21,10 @@
             <li class="nav-item">
               <a href="/" class="nav-link">Home</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item">
+              <a href="/allweapon" class="nav-link">Weapons</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -33,14 +36,13 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="/allproduct" class="dropdown-item text-white"
+                  <a href="/allweapon" class="dropdown-item text-white"
                     >All Weapons</a
                   >
                 </li>
                 <li>
                   <a href="/vandal" class="dropdown-item text-white">Vandal</a>
                 </li>
-                <!-- <li><hr class="dropdown-divider" /></li> -->
                 <li>
                   <a href="/phantom" class="dropdown-item text-white"
                     >Phantom</a
@@ -57,7 +59,7 @@
                   >
                 </li>
               </ul>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="/bundle" class="nav-link">Bundles</a>
             </li>

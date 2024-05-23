@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between align-center flex-wrap">
       <h2 class="mb-0">{{ weaponName }}</h2>
       <router-link to="/" class="text-decoration-none text-white">
-        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Shop
+        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Home
       </router-link>
     </div>
     <v-row dense class="mt-5">

@@ -30,6 +30,11 @@ const routes = [
     component: () => import('../views/AllProduct.vue')
   },
   {
+    path: '/allweapon',
+    name: 'allweapon',
+    component: () => import('../views/AllWeapon.vue')
+  },
+  {
     path: '/odin',
     name: 'odin',
     component: () => import('../views/Odin.vue')

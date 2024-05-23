@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-between align-center flex-wrap mb-5">
       <h2>All you need.</h2>
       <a href="/" class="text-decoration-none text-white">
-        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Shop
+        <i class="fa-solid fa-arrow-left mr-1"></i> Back to Home
       </a>
     </div>
     <div
