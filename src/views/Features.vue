@@ -134,6 +134,11 @@
           <p class="mt-3 text-secondary">{{ bundle.displayName }}</p>
         </router-link>
       </v-col>
+      <div class="text-center mt-5">
+        <a class="btn btn-outline-primary px-5" href="/bundle">
+          View All
+        </a>
+      </div>
     </v-row>
   </v-container>
 </template>
@@ -171,10 +176,34 @@ export default {
           this.bundles = bundleRes.data.data;
           this.skins = skinRes.data.data;
           this.contentTiers = tierRes.data.data;
+          this.randomizeBundles();
         }
       } catch (e) {
         console.log(e);
       }
+    },
+    randomizeBundles() {
+      const shuffled = [...this.bundles].sort(() => 0.5 - Math.random());
+      this.randomBundlesData = shuffled.slice(0, 9);
+    },
+    startCountdown() {
+      setInterval(() => {
+        const now = new Date().getTime();
+        const distance = this.nextUpdateTime - now;
+
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        this.countdown = `${minutes}m ${seconds}s`;
+
+        if (distance < 0) {
+          this.scheduleNextUpdate();
+        }
+      }, 1000);
+    },
+    scheduleNextUpdate() {
+      this.nextUpdateTime = new Date().getTime() + 10 * 60 * 1000; // 10 minutes from now
+      this.randomizeBundles();
     },
   },
   computed: {

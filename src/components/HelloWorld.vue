@@ -154,9 +154,8 @@
               <a :href="card.tagLink" class="text-decoration-none text-white">
                 <v-img
                   :src="card.src"
-                  class="white--text align-end rounded-lg"
+                  class="align-end rounded-lg exc-image"
                   gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0, 1)"
-                  height="400px"
                 >
                   <v-card-title>{{ card.title }}</v-card-title>
                 </v-img>
@@ -169,7 +168,7 @@
       <div class="mt-16">
         <div class="d-flex justify-content-between align-center flex-wrap">
           <h2 class="mb-0">Premium Bundles</h2>
-          <a href="/bundle" class="text-decoration-none text-white">
+          <a href="/features" class="text-decoration-none text-white">
             View all <i class="fa-solid fa-arrow-right ml-1"></i>
           </a>
         </div>
@@ -185,9 +184,8 @@
               <v-card class="rounded-xl">
                 <v-img
                   :src="randomBundle.displayIcon"
-                  class="white--text align-end rounded-xl"
+                  class="white--text align-end rounded-xl exc-image"
                   gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.0)"
-                  height="400px"
                 >
                   <div class="overlay">
                     <div class="overlay-text">
@@ -209,9 +207,8 @@
               <v-card class="rounded-xl">
                 <v-img
                   :src="item.displayIcon"
-                  class="white--text align-end rounded-xl"
+                  class="white--text align-end rounded-xl exc-image"
                   gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.0)"
-                  height="400px"
                 >
                   <div class="overlay">
                     <div class="overlay-text">
@@ -226,7 +223,7 @@
       </div>
     </v-container>
 
-    <div class="py-10 bg-text">
+    <div class="py-10 mt-16 bg-text">
       <div class="container">
         <div class="row d-flex align-items-center">
           <div class="col-lg-7 col-md-6 col-sm-12 mb-4">
