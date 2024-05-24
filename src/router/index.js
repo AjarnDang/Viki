@@ -65,6 +65,11 @@ const routes = [
     component: () => import('../views/Bundle.vue')
   },
   {
+    path: '/allBundle',
+    name: 'allBundle',
+    component: () => import('../views/AllBundle.vue')
+  },
+  {
     path: '/bundleDetail/:displayName',
     name: 'BundleDetail',
     component: () => import('../views/BundleDetail.vue')
