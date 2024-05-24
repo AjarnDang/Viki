@@ -105,6 +105,6 @@ export const melee = [
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-tactical-knife.png",
         link: "#",
-        name: "Melee",
+        name: "Tactical Knife",
     },
 ];

@@ -55,6 +55,11 @@ const routes = [
     component: () => import('../views/Operator.vue')
   },
   {
+    path: '/features',
+    name: 'features',
+    component: () => import('../views/Features.vue')
+  },
+  {
     path: '/bundle',
     name: 'bundle',
     component: () => import('../views/Bundle.vue')

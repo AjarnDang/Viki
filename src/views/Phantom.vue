@@ -1,9 +1,10 @@
 <template>
-  <v-container class="my-16">
+  <v-container class="mb-16">
+    <b-breadcrumb :items="Phantom" class="mt-5 mb-10"></b-breadcrumb>
     <div class="d-flex justify-content-between align-center flex-wrap">
       <h2 class="mb-0">Phantom</h2>
       <a href="/allweapon" class="text-decoration-none text-white">
-        <i class="fa-solid fa-arrow-left mr-1"></i> Back 
+        <i class="fa-solid fa-arrow-left mr-1"></i> Back
       </a>
     </div>
     <v-row dense class="mt-5">
@@ -41,13 +42,14 @@
   </v-container>
 </template>
 
-
 <script>
+import { Phantom } from "@/components/Breadcrump";
 import axios from "axios";
 
 export default {
   data() {
     return {
+      Phantom,
       info: [],
       currentPage: 1,
       itemsPerPage: 21, // Number of items per page
@@ -69,7 +71,9 @@ export default {
   methods: {
     async getImage() {
       try {
-        const res = await axios.get(`https://valorant-api.com/v1/weapons/skins`);
+        const res = await axios.get(
+          `https://valorant-api.com/v1/weapons/skins`
+        );
         if (res.data.status === 200) {
           const filteredData = res.data.data.filter(
             (item) =>
@@ -95,7 +99,7 @@ export default {
   color: #eeeeee !important;
 }
 .theme--light.v-pagination .v-pagination__item {
-    background: #eeeeee;
-    color: #212121;
+  background: #eeeeee;
+  color: #212121;
 }
 </style>

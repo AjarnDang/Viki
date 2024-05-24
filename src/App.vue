@@ -61,6 +61,9 @@
               </ul>
             </li> -->
             <li class="nav-item">
+              <a href="/features" class="nav-link">Features</a>
+            </li>
+            <li class="nav-item">
               <a href="/bundle" class="nav-link">Bundles</a>
             </li>
             <li class="nav-item">
@@ -220,4 +223,19 @@ nav li.router-link-exact-active {
 .v-application ol {
   padding-left: 0;
 }
+
+.breadcrumb-item a {
+  color: var(--secondary) !important;
+  text-decoration: none;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--secondary) !important;
+}
+
+.breadcrumb-item.active span {
+  color: var(--primary) !important;
+}
+
+
 </style>

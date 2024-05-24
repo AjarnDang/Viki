@@ -39,6 +39,7 @@ export default {
 
   data() {
     return {
+    weaponbc,
       project: [
         {
           no: "PROJECT #1",

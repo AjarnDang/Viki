@@ -1,5 +1,6 @@
 <template>
-  <v-container class="my-16">
+  <v-container class="mb-16">
+<b-breadcrumb :items="Vandal" class="mt-5 mb-10"></b-breadcrumb>
     <div class="d-flex justify-content-between align-center flex-wrap">
       <h2 class="mb-0">Vandal</h2>
       <a href="/allweapon" class="text-decoration-none text-white">
@@ -43,11 +44,13 @@
 
 
 <script>
+import { Vandal } from "@/components/Breadcrump";
 import axios from "axios";
 
 export default {
   data() {
     return {
+    Vandal,
       info: [],
       currentPage: 1,
       itemsPerPage: 21, // Number of items per page

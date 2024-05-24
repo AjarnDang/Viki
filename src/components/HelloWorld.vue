@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container class="mt-16">
+    <v-container class="mt-5">
       <div
         id="carouselExampleAutoplaying"
         class="carousel slide"

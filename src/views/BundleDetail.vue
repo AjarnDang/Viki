@@ -1,12 +1,19 @@
 <template>
-  <v-container class="my-16">
-    <div class="d-flex justify-content-between align-items-center flex-wrap mb-5">
-      <h2>{{ cleanedDisplayName }}</h2>
+  <v-container class="mb-16">
+    <b-breadcrumb class="mt-5 mb-10">
+      <b-breadcrumb-item href="/">Home</b-breadcrumb-item>
+    <b-breadcrumb-item href="/">Bundle</b-breadcrumb-item>
+      <b-breadcrumb-item active>{{ cleanedDisplayName }} Bundle</b-breadcrumb-item>
+    </b-breadcrumb>
+    <div
+      class="d-flex justify-content-between align-items-center flex-wrap mb-5"
+    >
+      <h2>{{ cleanedDisplayName }} Bundle</h2>
       <div>
-      <a href="/bundle" class="text-decoration-none text-white">
-        <i class="fa-solid fa-arrow-left mr-1"></i> Back
-      </a>
-    </div>
+        <a href="/bundle" class="text-decoration-none text-white">
+          <i class="fa-solid fa-arrow-left mr-1"></i> Back
+        </a>
+      </div>
     </div>
     <img
       :src="detail.displayIcon"
@@ -36,7 +43,7 @@
           <div class="card-body p-0 text-white card-weapon-detail">
             <div>
               <h5 class="mb-0">{{ skin.displayName }}</h5>
-              <p class="mb-0 text-primary">1650 VP</p>
+              <!-- <p class="mb-0 text-primary">1650 VP</p> -->
             </div>
           </div>
         </div>
@@ -53,7 +60,10 @@
         v-for="(buddy, index) in matchingBuddies"
         :key="index"
       >
-        <div v-if="buddy.displayName" class="card bg-transparent shadow-none bg-text p-4 card-buddy">
+        <div
+          v-if="buddy.displayName"
+          class="card bg-transparent shadow-none bg-text p-4 card-buddy"
+        >
           <v-img
             :src="buddy.displayIcon"
             class="rounded-lg w-100"
@@ -63,7 +73,10 @@
           <h5 class="mt-3 mb-0 text-secondary">{{ buddy.displayName }}</h5>
           <p class="mb-0 text-primary">Exclusive only in Bundle</p>
         </div>
-        <div v-else class="card bg-transparent shadow-none bg-text p-4 card-spray">
+        <div
+          v-else
+          class="card bg-transparent shadow-none bg-text p-4 card-spray"
+        >
           <p class="text-secondary">This bundle has no data</p>
         </div>
       </v-col>

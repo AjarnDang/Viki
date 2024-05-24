@@ -1,5 +1,6 @@
 <template>
-  <v-container class="my-16">
+  <v-container class="mb-16">
+<b-breadcrumb :items="weaponbc" class="mt-5 mb-10"></b-breadcrumb>
     <div class="d-flex justify-content-between align-center flex-wrap mb-5">
       <h2>All you need.</h2>
       <a href="/" class="text-decoration-none text-white">

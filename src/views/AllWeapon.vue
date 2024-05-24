@@ -1,5 +1,6 @@
 <template>
-  <v-container class="my-16">
+  <v-container class="mb-16">
+    <b-breadcrumb :items="WeaponBC" class="mt-5 mb-10"></b-breadcrumb>
     <div class="d-flex justify-content-between align-center flex-wrap mb-5">
       <h2>All you need.</h2>
       <a href="/" class="text-decoration-none text-white">
@@ -7,41 +8,10 @@
       </a>
     </div>
     <div
-      class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
+      class="pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
     >
       <h5 class="text-primary mb-0">Pistols</h5>
-      <!-- <a href="/vandal" class="text-decoration-none text-white">
-          View all <i class="fa-solid fa-arrow-right ml-1"></i>
-        </a> -->
     </div>
-
-    <!-- <v-sheet
-        class="mx-auto shadow-none mt-5"
-        elevation="8"
-        color="transparent"
-        dark
-      >
-        <v-slide-group v-model="model" active-class="success" show-arrows>
-          <v-slide-item v-for="(info, index) in pistol" :key="index">
-            <v-card
-              :color="dark"
-              class="pa-8 ma-3 bottom-gradient"
-              height="auto"
-              width="300"
-            >
-              <v-row class="fill-height" align="center" justify="center">
-                <v-img
-                  :src="info.img"
-                  class="w-100 rounded-lg mb-5 mt-3"
-                ></v-img>
-                <v-card-text class="px-0 pb-0 pt-5">
-                  <h6 class="mb-0 weapon-name">{{ info.name }}</h6>
-                </v-card-text>
-              </v-row>
-            </v-card>
-          </v-slide-item>
-        </v-slide-group>
-      </v-sheet> -->
     <v-row class="mb-10">
       <v-col
         v-for="(info, index) in pistol"
@@ -55,7 +25,7 @@
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
-              <h6 class="mb-0 weapon-name">{{ info.name }}</h6>
+              <h6 class="mb-0 weapon-name text-secondary">{{ info.name }}</h6>
             </v-card-text>
           </v-row>
         </v-card>
@@ -64,7 +34,7 @@
 
 
     <div
-      class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
+      class="pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
     >
       <h5 class="text-primary mb-0">SMGs</h5>
     </div>
@@ -81,7 +51,7 @@
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
-              <h6 class="mb-0 weapon-name">{{ info.name }}</h6>
+              <h6 class="mb-0 weapon-name text-secondary">{{ info.name }}</h6>
             </v-card-text>
           </v-row>
         </v-card>
@@ -89,7 +59,7 @@
     </v-row>
 
     <div
-      class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
+      class="pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
     >
       <h5 class="text-primary mb-0">Shotguns</h5>
     </div>
@@ -106,7 +76,7 @@
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
-              <h6 class="mb-0 weapon-name">{{ info.name }}</h6>
+              <h6 class="mb-0 weapon-name text-secondary">{{ info.name }}</h6>
             </v-card-text>
           </v-row>
         </v-card>
@@ -114,7 +84,7 @@
     </v-row>
 
     <div
-      class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
+      class="pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
     >
       <h5 class="text-primary mb-0">Rifles</h5>
     </div>
@@ -131,7 +101,7 @@
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
-              <h6 class="mb-0 weapon-name">{{ info.name }}</h6>
+              <h6 class="mb-0 weapon-name text-secondary">{{ info.name }}</h6>
             </v-card-text>
           </v-row>
         </v-card>
@@ -140,7 +110,7 @@
 
 
     <div
-      class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
+      class="pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
     >
       <h5 class="text-primary mb-0">Snipers</h5>
     </div>
@@ -157,7 +127,7 @@
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
-              <h6 class="mb-0 weapon-name">{{ info.name }}</h6>
+              <h6 class="mb-0 weapon-name text-secondary">{{ info.name }}</h6>
             </v-card-text>
           </v-row>
         </v-card>
@@ -165,7 +135,7 @@
     </v-row>
 
     <div
-      class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
+      class="pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
     >
       <h5 class="text-primary mb-0">Heavys</h5>
     </div>
@@ -182,7 +152,7 @@
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
-              <h6 class="mb-0 weapon-name">{{ info.name }}</h6>
+              <h6 class="mb-0 weapon-name text-secondary">{{ info.name }}</h6>
             </v-card-text>
           </v-row>
         </v-card>
@@ -190,7 +160,7 @@
     </v-row>
 
     <div
-      class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
+      class="pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
     >
       <h5 class="text-primary mb-0">Melee</h5>
     </div>
@@ -207,7 +177,7 @@
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
-              <h6 class="mb-0 weapon-name">{{ info.name }}</h6>
+              <h6 class="mb-0 weapon-name text-secondary">{{ info.name }}</h6>
             </v-card-text>
           </v-row>
         </v-card>
@@ -220,6 +190,7 @@
 <script>
 import axios from "axios";
 import { pistol, smg, shotgun, rifle, sniper, melee, heavy } from "@/components/Weapons";
+import { WeaponBC } from "@/components/Breadcrump";
 
 export default {
   name: "AllProduct",
@@ -233,6 +204,7 @@ export default {
       sniper,
       heavy,
       melee,
+      WeaponBC,
     };
   },
   mounted() {
