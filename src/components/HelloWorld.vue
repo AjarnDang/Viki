@@ -303,10 +303,16 @@ export default {
       ],
       tags: [
         {
+          tagName: "All Weapons",
+          tagLink: "/allweapon",
+          tagImage:
+            require("../assets/img/allweapon.png"),
+        },
+        {
           tagName: "Bundles",
           tagLink: "/bundle",
           tagImage:
-            "https://vgraphs.com/images/weapons/valorant-elderflame-vandal-profile-icon.png",
+            "https://vgraphs.com/images/weapons/valorant-prime-vandal-profile-icon.png",
         },
         {
           tagName: "Vandal",
@@ -367,7 +373,7 @@ export default {
             "Phantom",
             "Operator",
           ]);
-          this.randomFilteredSkins = this.getRandomItems(filteredSkins, 5); //number of items
+          this.randomFilteredSkins = this.getRandomItems(filteredSkins, 6); //number of items
         }
       } catch (e) {
         console.log(e);

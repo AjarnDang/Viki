@@ -23,7 +23,7 @@
           </div>
         </nav>
       </v-col>
-      <v-col lg="10" md="9" sm="9" cols="12">
+      <v-col lg="9" md="9" sm="9" cols="12">
         <div class="main-content">
           <section id="section1" class="section">
             <h2 class="text-primary">Overview</h2>
@@ -100,6 +100,7 @@
               <a
                 href="https://dash.valorant-api.com/"
                 class="text-primary text-decoration-none"
+                target="_blank"
                 >Valorant-API</a
               >
               also provide an extensive API containing data of most in-game
@@ -109,6 +110,7 @@
               can find a way to contact us
               <a
                 href="https://dash.valorant-api.com/about"
+                target="_blank"
                 class="text-primary text-decoration-none"
                 >here</a
               >.

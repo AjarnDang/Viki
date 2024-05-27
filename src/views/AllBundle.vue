@@ -116,7 +116,12 @@ export default {
 }
 
 .theme--light.v-pagination .v-pagination__item {
-  background-color: var(--white);
+  background-color: var(--gray);
   color: var(--text);
 }
+
+.theme--light.v-pagination .v-pagination__navigation {
+  background: var(--gray);
+}
+
 </style>
