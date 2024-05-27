@@ -113,6 +113,7 @@ export default {
   background-color: var(--primary) !important;
   border-color: var(--primary) !important;
   color: var(--white) !important;
+  
 }
 
 .theme--light.v-pagination .v-pagination__item {

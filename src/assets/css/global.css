@@ -332,9 +332,15 @@ footer a.nav-link i:hover {
   border-color: var(--light-gray) !important;
 }
 
+.theme--dark.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) {
+  font-weight: 300 !important;
+}
+
 .v-tab--active {
   color: var(--primary) !important;
+  font-weight: 800 !important;
 }
+
 .v-tab:before, .v-tabs-slider-wrapper {
   background-color: var(--primary) !important;
 }
@@ -343,6 +349,7 @@ footer a.nav-link i:hover {
   background-color: var(--primary) !important;
   border-color: var(--primary) !important;
 }
+
 
 /* .theme--light.v-btn.v-btn--has-bg {
   background-color: transparent !important;
