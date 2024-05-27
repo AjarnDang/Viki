@@ -1,10 +1,11 @@
 <template>
+  <div>
       <v-row>
         <v-col
           cols="6"
           sm="6"
           md="4"
-          v-for="(item, index) in selectBundles"
+          v-for="(item, index) in paginatedSelectBundles"
           :key="index"
         >
           <router-link
@@ -23,6 +24,14 @@
           </router-link>
         </v-col>
       </v-row>
+      <div class="d-flex justify-content-center mt-10">
+      <v-pagination
+        v-model="currentPage"
+        :length="totalPages"
+        @input="changePage"
+      ></v-pagination>
+    </div>
+    </div>
   </template>
   
 <script>
@@ -34,6 +43,8 @@ export default {
       bundles: [],
       skins: [],
       contentTiers: [],
+      currentPage: 1,
+      itemsPerPage: 21,
     };
   },
   mounted() {
@@ -60,6 +71,9 @@ export default {
       } catch (e) {
         console.log(e);
       }
+    },
+    changePage(page) {
+      this.currentPage = page;
     },
   },
   computed: {
@@ -183,6 +197,14 @@ export default {
       return this.bundles.filter(
         (item) => !excludedDisplayNames.has(item.displayName)
       );
+    },
+    paginatedSelectBundles() {
+      const start = (this.currentPage - 1) * this.itemsPerPage;
+      const end = start + this.itemsPerPage;
+      return this.selectBundles.slice(start, end);
+    },
+    totalPages() {
+      return Math.ceil(this.selectBundles.length / this.itemsPerPage);
     },
   },
 };

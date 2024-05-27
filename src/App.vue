@@ -64,7 +64,7 @@
               <a href="/features" class="nav-link">Features</a>
             </li>
             <li class="nav-item">
-              <a href="/bundle" class="nav-link">Bundles</a>
+              <a href="/allBundle" class="nav-link">Bundles</a>
             </li>
             <li class="nav-item">
               <a

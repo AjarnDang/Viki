@@ -108,4 +108,15 @@ export default {
 .theme--light.v-tabs > .v-tabs-bar {
   background: transparent !important;
 }
+
+.v-application .primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--white) !important;
+}
+
+.theme--light.v-pagination .v-pagination__item {
+  background-color: var(--white);
+  color: var(--text);
+}
 </style>
