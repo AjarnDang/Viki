@@ -24,6 +24,19 @@ export const Contact = [
   },
 ];
 
+export const Api = [
+  {
+    text: 'Home',
+    disabled: false,
+    href: '/',
+  },
+  {
+    text: 'APIs',
+    disabled: false,
+    href: '/api',
+  },
+];
+
 export const Features = [
   {
     text: 'Home',
@@ -137,5 +150,6 @@ export const Spectre = [
     href: '/spectre',
   },
 ];
+
 
 

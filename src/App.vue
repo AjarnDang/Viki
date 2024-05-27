@@ -237,5 +237,8 @@ nav li.router-link-exact-active {
   color: var(--primary) !important;
 }
 
+.v-tabs-slider {
+  background-color: var(--primary) !important;
+}
 
 </style>

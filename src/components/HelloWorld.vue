@@ -492,23 +492,6 @@ export default {
   color: #212121 !important;
 }
 
-.weapons {
-  text-decoration: none;
-  color: #eeeeee !important;
-  transition: 0.3s;
-  border-radius: 1rem;
-  padding-bottom: 2rem;
-}
-
-.weapons:hover {
-  background-color: #ff4655;
-  color: #212121 !important;
-}
-
-.weapon-name:hover {
-  color: #212121 !important;
-}
-
 .v-card--reveal {
   background-color: #ff4655;
   align-items: center;
@@ -519,38 +502,4 @@ export default {
   width: 100%;
 }
 
-.bundle-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.bundle-card .v-img {
-  position: relative;
-}
-
-.bundle-card .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.bundle-card:hover .overlay {
-  opacity: 1;
-}
-
-.bundle-card .overlay-text {
-  color: #ff4655;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 0 10px;
-}
 </style>
