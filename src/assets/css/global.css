@@ -242,10 +242,10 @@ footer a.nav-link i:hover {
   grid-row: 3 / span 2;
 }
 
-.weapon-name {
+/* .weapon-name {
   position: absolute;
   bottom: 1rem;
-}
+} */
 
 .exc-image {
   height: 400px;

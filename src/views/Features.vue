@@ -29,7 +29,7 @@
           >
             <img
               :src="item.displayIcon"
-              class="d-block w-100 carousel-image-2"
+              class="d-block w-100"
               alt="img-features"
             />
             <div class="carousel-caption d-none d-md-block">

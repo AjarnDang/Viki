@@ -21,7 +21,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" height="230" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -47,7 +47,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" height="230" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -72,7 +72,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" height="230" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -97,7 +97,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" height="230" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -123,7 +123,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" height="230" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -148,7 +148,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" height="230" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -173,7 +173,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" height="230" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -188,7 +188,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import { pistol, smg, shotgun, rifle, sniper, melee, heavy } from "@/components/Weapons";
 import { WeaponBC } from "@/components/Breadcrump";
 
@@ -206,50 +205,6 @@ export default {
       melee,
       WeaponBC,
     };
-  },
-  mounted() {
-    this.getWeapon();
-  },
-  methods: {
-    async getWeapon() {
-      try {
-        const res = await axios.get(
-          "https://valorant-api.com/v1/weapons/skins"
-        );
-        if (res.data.status === 200) {
-          this.info = res.data.data; // Store all data
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    },
-  },
-  computed: {
-    odinInfo() {
-      return this.info
-        .filter((item) => item.displayName.includes("Odin"))
-        .slice(0, 10);
-    },
-    vandalInfo() {
-      return this.info
-        .filter((item) => item.displayName.includes("Vandal"))
-        .slice(0, 10);
-    },
-    phantomInfo() {
-      return this.info
-        .filter((item) => item.displayName.includes("Phantom"))
-        .slice(0, 10);
-    },
-    operatorInfo() {
-      return this.info
-        .filter((item) => item.displayName.includes("Operator"))
-        .slice(0, 10);
-    },
-    spectreInfo() {
-      return this.info
-        .filter((item) => item.displayName.includes("Spectre"))
-        .slice(0, 10);
-    },
   },
 };
 </script>
