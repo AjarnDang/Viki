@@ -44,7 +44,7 @@
 
 
 <script>
-import { Spectre, } from "@/components/Breadcrump";
+import { Spectre, } from "@/data/Breadcrump";
 import axios from "axios";
 
 export default {

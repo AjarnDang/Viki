@@ -121,9 +121,9 @@
     </v-row>
   </v-container>
 </template>
-
+@/assets/data/Breadcrump
 <script>
-import { Api } from "@/components/Breadcrump";
+import { Api } from "@/data/Breadcrump";
 
 export default {
   data() {

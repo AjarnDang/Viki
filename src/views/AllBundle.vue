@@ -45,7 +45,7 @@
 
 <script>
 import axios from "axios";
-import { Bundle } from "@/components/Breadcrump";
+import { Bundle } from "@/data/Breadcrump";
 import AllBundles from "@/components/AllBundles";
 import ExclusiveBundles from "@/components/ExclusiveBundles";
 import PremiumBundles from "@/components/PremiumBundles";

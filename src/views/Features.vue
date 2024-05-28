@@ -144,7 +144,7 @@
 </template>
 <script>
 import axios from "axios";
-import { Features } from "@/components/Breadcrump";
+import { Features } from "@/data/Breadcrump";
 
 export default {
   name: "AllProduct",

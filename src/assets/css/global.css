@@ -9,11 +9,15 @@
   --white: #eeeeee;
   --dark: #181A20;
   --text: #212121;
+  --success: #4caf50;
+  --warning: #fb8c00;
+  --info: #2196f3;
+  --danger: #ff5252;
+  --border-main: 1rem;
 }
 
 * {
   font-size: 14px;
-  color: var(--text);
   font-family: "Noto Sans Thai Looped"," Inter", sans-serif;
   box-sizing: border-box;
   color: var(--white);
@@ -24,10 +28,6 @@
 .v-application--wrap {
     background-color: var(--dark) !important;
 }
-
-/* h1 { font-size: 4.5vw !important;}
-h2 { font-size: 3vw !important;} */
-
 
 h1, h2, h3, h4, h5, h6, label, thead {
   font-family: "Noto Sans Thai", "Inter", sans-serif !important;
@@ -49,7 +49,7 @@ i.fa-solid:hover {
   height: 250px;
   width: 100%;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: var(--border-main);
   object-position: 80% 100%;
   padding: 0px 3px;
 }
@@ -58,7 +58,7 @@ i.fa-solid:hover {
   min-height: 250px;
   width: 100%;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: var(--border-main);
   object-position: 80% 100%;
   padding: 0px 3px;
 }
@@ -98,6 +98,10 @@ a.text-white:hover {
 }
 a.text-primary:hover {
   color: var(--white) !important;
+}
+
+pre code a {
+  color: var(--info) !important;
 }
 
 .bg-text {
@@ -146,8 +150,8 @@ a.text-primary:hover {
 }
 
 .card-weapon {
-  min-height:200px;
-  height: 35vh;
+  height: auto;
+  min-height: 40vh;
 }
 
 .card-weapon img {
@@ -209,7 +213,7 @@ footer a.nav-link i:hover {
 .category {
   background-color: var(--primary);
   color: var(--white);
-  border-radius: 2rem;
+  border-radius: var(--border-main);
   padding: 5px 8px;
   display: inline-flex;
   align-items: center;
@@ -224,12 +228,12 @@ footer a.nav-link i:hover {
 .image-gallerry .item {
   width: auto;
   margin: 5px;
-  color: white;
+  color: var(--white);
 }
 
 .image-gallerry .item img {
   width: 100%;
-  border-radius: 1rem;
+  border-radius: var(--border-main);
 }
 
 .image-gallerry .item:nth-of-type(1) {
@@ -254,20 +258,20 @@ footer a.nav-link i:hover {
 
 .weapons {
   text-decoration: none;
-  color: #eeeeee !important;
+  color: var(--white) !important;
   transition: 0.3s;
-  border-radius: 1rem;
+  border-radius: var(--border-main);
   padding-bottom: 2rem;
 }
 
 .weapons:hover {
-  background-color: #ff4655;
-  color: #212121 !important;
+  background-color: var(--primary);
+  color: var(--text) !important;
 }
 
-.weapon-name:hover {
+/* .weapon-name:hover {
   color: #212121 !important;
-}
+} */
 
 .bundle-card {
   position: relative;
@@ -297,7 +301,7 @@ footer a.nav-link i:hover {
 }
 
 .bundle-card .overlay-text {
-  color: #ff4655;
+  color: var(--primary);
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -307,7 +311,7 @@ footer a.nav-link i:hover {
 .code-snippet {
   background-color: var(--text);
   padding: 20px;
-  border-radius: 4px;
+  border-radius: var(--border-main);
   position: relative;
   overflow-x: auto;
 }
@@ -315,7 +319,7 @@ footer a.nav-link i:hover {
 .code-snippet pre {
   margin: 0;
   white-space: pre-wrap;
-}
+} 
 
 .code-snippet code {
   font-family: 'Courier New', Courier, monospace;

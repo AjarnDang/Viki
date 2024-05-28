@@ -20,11 +20,6 @@ const routes = [
     component: () => import('../views/Login.vue')
   },
   {
-    path: '/allproduct',
-    name: 'allproduct',
-    component: () => import('../views/AllProduct.vue')
-  },
-  {
     path: '/allweapon',
     name: 'allweapon',
     component: () => import('../views/AllWeapon.vue')
@@ -75,16 +70,17 @@ const routes = [
     component: () => import('../views/BundleDetail.vue')
   },
   {
-    path: '/weapondetail',
-    name: 'weapondetail',
-    component: () => import('../views/WeaponDetail.vue')
+    path: '/weapon/:displayName',
+    name: 'weaponDetail',
+    component: () => import('../views/WeaponDetail.vue'),
+    props: true,
   },
   {
     path: '/api',
     name: 'api',
     component: () => import('../views/Api.vue')
   },
- 
+
 ]
 
 const router = new VueRouter({

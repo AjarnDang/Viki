@@ -44,7 +44,7 @@
 
 <script>
 import axios from "axios";
-import { Odin } from "@/components/Breadcrump";
+import { Odin } from "@/data/Breadcrump";
 
 export default {
   data() {

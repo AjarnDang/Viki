@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { Phantom } from "@/components/Breadcrump";
+import { Phantom } from "@/data/Breadcrump";
 import axios from "axios";
 
 export default {

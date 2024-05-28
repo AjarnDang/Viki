@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { Contact } from "@/components/Breadcrump";
+import { Contact } from "@/data/Breadcrump";
 import CardSocialVue from "@/components/CardSocial.vue";
 
 export default {

@@ -188,8 +188,8 @@
 </template>
 
 <script>
-import { pistol, smg, shotgun, rifle, sniper, melee, heavy } from "@/components/Weapons";
-import { WeaponBC } from "@/components/Breadcrump";
+import { pistol, smg, shotgun, rifle, sniper, melee, heavy } from "@/data/Weapons";
+import { WeaponBC } from "@/data/Breadcrump";
 
 export default {
   name: "AllProduct",

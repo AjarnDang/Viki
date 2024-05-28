@@ -255,7 +255,7 @@
 <script>
 // import NewArrival from "../components/NewArrival.vue";
 import axios from "axios";
-import { Weapons, Tags } from "@/components/Home"
+import { Weapons, Tags } from "@/data/Home";
 
 export default {
   components: {
@@ -299,7 +299,12 @@ export default {
             "Phantom",
             "Operator",
           ]);
-          this.randomFilteredSkins = this.getRandomItems(filteredSkins, 6); //number of items
+
+          let randomFilteredSkins = this.getRandomItems(filteredSkins, 6);
+          randomFilteredSkins = randomFilteredSkins.filter(
+            (skin) => skin.displayName !== "Standard"
+          );
+          this.randomFilteredSkins = randomFilteredSkins;
         }
       } catch (e) {
         console.log(e);

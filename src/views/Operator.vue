@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { Operator } from "@/components/Breadcrump";
+import { Operator } from "@/data/Breadcrump";
 import axios from "axios";
 
 export default {
