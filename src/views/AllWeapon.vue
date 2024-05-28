@@ -3,7 +3,7 @@
     <b-breadcrumb :items="WeaponBC" class="mt-5 mb-10"></b-breadcrumb>
     <div class="d-flex justify-content-between align-center flex-wrap mb-5">
       <h2>All you need.</h2>
-      <a href="/" class="text-decoration-none text-white">
+      <a to="/" class="text-decoration-none text-white">
         <i class="fa-solid fa-arrow-left mr-1"></i> Back
       </a>
     </div>
@@ -21,7 +21,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :to="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -47,7 +47,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :to="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -72,7 +72,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :to="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -97,7 +97,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :to="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -123,7 +123,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :to="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -148,7 +148,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :to="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">
@@ -173,7 +173,7 @@
         sm="6"
         cols="6"
       >
-        <v-card dark class="pa-8 bottom-gradient" width="100%" :href="info.link">
+        <v-card dark class="pa-8 bottom-gradient" width="100%" :to="info.link">
           <v-row class="fill-height" align="center" justify="center">
             <v-img :src="info.img" class="w-100 rounded-lg mb-5 mt-3"></v-img>
             <v-card-text class="px-0 pb-0 pt-5">

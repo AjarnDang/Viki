@@ -3,7 +3,7 @@
     <b-breadcrumb :items="Vandal" class="mt-5 mb-10"></b-breadcrumb>
     <div class="d-flex justify-content-between align-center flex-wrap">
       <h2 class="mb-0">Vandal</h2>
-      <a href="/allweapon" class="text-decoration-none text-white">
+      <a to="/allweapon" class="text-decoration-none text-white">
         <i class="fa-solid fa-arrow-left mr-1"></i> Back
       </a>
     </div>

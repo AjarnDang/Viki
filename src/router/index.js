@@ -26,27 +26,27 @@ const routes = [
   },
   {
     path: '/odin',
-    name: 'odin',
+    name: 'Odin',
     component: () => import('../views/Odin.vue')
   },
   {
     path: '/vandal',
-    name: 'vandal',
+    name: 'Vandal',
     component: () => import('../views/Vandal.vue')
   },
   {
     path: '/phantom',
-    name: 'phantom',
+    name: 'Phantom',
     component: () => import('../views/Phantom.vue')
   },
   {
     path: '/spectre',
-    name: 'spectre',
+    name: 'Spectre',
     component: () => import('../views/Spectre.vue')
   },
   {
     path: '/operator',
-    name: 'operator',
+    name: 'Operator',
     component: () => import('../views/Operator.vue')
   },
   {

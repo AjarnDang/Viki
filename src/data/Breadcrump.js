@@ -2,12 +2,12 @@ export const WeaponBC = [
   {
     text: 'Home',
     disabled: false,
-    href: '/',
+    to: '/',
   },
   {
     text: 'Weapons',
     disabled: true,
-    href: '/allweapon',
+    to: '/allweapon',
   },
 ];
 
@@ -15,12 +15,12 @@ export const Contact = [
   {
     text: 'Home',
     disabled: false,
-    href: '/',
+    to: '/',
   },
   {
     text: 'Contact',
     disabled: true,
-    href: '/contact',
+    to: '/contact',
   },
 ];
 
@@ -28,12 +28,12 @@ export const Api = [
   {
     text: 'Home',
     disabled: false,
-    href: '/',
+    to: '/',
   },
   {
     text: 'APIs',
     disabled: false,
-    href: '/api',
+    to: '/api',
   },
 ];
 
@@ -41,12 +41,12 @@ export const Features = [
   {
     text: 'Home',
     disabled: false,
-    href: '/',
+    to: '/',
   },
   {
     text: 'Features',
     disabled: true,
-    href: '/features',
+    to: '/features',
   },
 ];
 
@@ -54,12 +54,12 @@ export const Bundle = [
   {
     text: 'Home',
     disabled: false,
-    href: '/',
+    to: '/',
   },
   {
     text: 'Bundle',
     disabled: true,
-    href: '/bundle',
+    to: '/bundle',
   },
 ];
 
@@ -67,17 +67,17 @@ export const Vandal = [
   {
     text: 'Home',
     disabled: false,
-    href: '/',
+    to: '/',
   },
   {
     text: 'Weapon',
     disabled: false,
-    href: '/allweapon',
+    to: '/allweapon',
   },
   {
     text: 'Vandal',
     disabled: true,
-    href: '/vandal',
+    to: '/vandal',
   },
 ];
 
@@ -85,17 +85,17 @@ export const Phantom = [
   {
     text: 'Home',
     disabled: false,
-    href: '/',
+    to: '/',
   },
   {
     text: 'Weapon',
     disabled: false,
-    href: '/allweapon',
+    to: '/allweapon',
   },
   {
     text: 'Phantom',
     disabled: true,
-    href: '/phantom',
+    to: '/phantom',
   },
 ];
 
@@ -103,51 +103,51 @@ export const Odin = [
   {
     text: 'Home',
     disabled: false,
-    href: '/',
+    to: '/',
   },
   {
     text: 'Weapon',
     disabled: false,
-    href: '/allweapon',
+    to: '/allweapon',
   },
   {
     text: 'Odin',
     disabled: true,
-    href: '/odin',
+    to: '/odin',
   },
 ];
 export const Operator = [
   {
     text: 'Home',
     disabled: false,
-    href: '/',
+    to: '/',
   },
   {
     text: 'Weapon',
     disabled: false,
-    href: '/allweapon',
+    to: '/allweapon',
   },
   {
     text: 'Operator',
     disabled: true,
-    href: '/operator',
+    to: '/operator',
   },
 ];
 export const Spectre = [
   {
     text: 'Home',
     disabled: false,
-    href: '/',
+    to: '/',
   },
   {
     text: 'Weapon',
     disabled: false,
-    href: '/allweapon',
+    to: '/allweapon',
   },
   {
     text: 'Spectre',
     disabled: true,
-    href: '/spectre',
+    to: '/spectre',
   },
 ];
 

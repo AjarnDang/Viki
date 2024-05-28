@@ -3,7 +3,7 @@
     <b-breadcrumb :items="Features" class="mt-5 mb-10"></b-breadcrumb>
     <div class="d-flex justify-content-between align-center flex-wrap mb-5">
       <h2>Artistic Mastery.</h2>
-      <a href="/" class="text-decoration-none text-white">
+      <a to="/" class="text-decoration-none text-white">
         <i class="fa-solid fa-arrow-left mr-1"></i> Back
       </a>
     </div>
@@ -66,7 +66,7 @@
         Get your favorite
         <h3 class="d-inline text-primary">VCT Team</h3>
       </h3>
-      <a href="/allbundle" class="text-decoration-none text-white">
+      <a to="/allbundle" class="text-decoration-none text-white">
         View all <i class="fa-solid fa-arrow-right mr-1"></i>
       </a>
     </div>
@@ -135,7 +135,7 @@
         </router-link>
       </v-col>
       <div class="text-center mt-5">
-        <a class="btn btn-outline-primary px-5" href="/bundle">
+        <a class="btn btn-outline-primary px-5" to="/bundle">
           View All
         </a>
       </div>

@@ -160,9 +160,9 @@ pre code a {
 }
 
 .card-weapon-detail {
-  display: flex;
-  align-items: end;
-}
+  position: absolute;
+  bottom: 1.5rem;
+} 
 
 .accordion-item {
   border: 0;

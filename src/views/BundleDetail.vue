@@ -1,16 +1,18 @@
 <template>
   <v-container class="mb-16">
     <b-breadcrumb class="mt-5 mb-10">
-      <b-breadcrumb-item href="/">Home</b-breadcrumb-item>
-    <b-breadcrumb-item href="/">Bundle</b-breadcrumb-item>
-      <b-breadcrumb-item active>{{ cleanedDisplayName }} Bundle</b-breadcrumb-item>
+      <b-breadcrumb-item to="/">Home</b-breadcrumb-item>
+      <b-breadcrumb-item to="/">Bundle</b-breadcrumb-item>
+      <b-breadcrumb-item active
+        >{{ cleanedDisplayName }} Bundle</b-breadcrumb-item
+      >
     </b-breadcrumb>
     <div
       class="d-flex justify-content-between align-items-center flex-wrap mb-5"
     >
       <h2>{{ cleanedDisplayName }} Bundle</h2>
       <div>
-        <a href="/bundle" class="text-decoration-none text-white">
+        <a to="/bundle" class="text-decoration-none text-white">
           <i class="fa-solid fa-arrow-left mr-1"></i> Back
         </a>
       </div>
