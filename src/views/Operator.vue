@@ -16,9 +16,14 @@
         v-for="(item, index) in paginatedInfo"
         :key="index"
       >
-        <div>
+        <router-link
+          :to="{
+            name: 'weaponDetail',
+            params: { displayName: item.displayName },
+          }"
+          class="text-decoration-none"
+        >
           <div class="card bg-transparent shadow-none bg-text p-4 card-weapon">
-            <router-link :to="{ name: 'weaponDetail', params: { displayName: item.displayName } }" class="text-decoration-none">
             <img
               :src="item.displayIcon"
               class="white--text align-end mt-2 mb-5"
@@ -48,9 +53,8 @@
                 <h5 class="mb-0 mt-1">{{ item.displayName }}</h5>
               </div>
             </div>
-            </router-link>
           </div>
-        </div>
+        </router-link>
       </v-col>
     </v-row>
     <v-pagination
@@ -132,5 +136,21 @@ export default {
 .theme--light.v-pagination .v-pagination__item {
   background: #eeeeee;
   color: #212121;
+}
+
+.v-application .primary {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: var(--white) !important;
+  
+}
+
+.theme--light.v-pagination .v-pagination__item {
+  background-color: var(--gray);
+  color: var(--text);
+}
+
+.theme--light.v-pagination .v-pagination__navigation {
+  background: var(--gray);
 }
 </style>
