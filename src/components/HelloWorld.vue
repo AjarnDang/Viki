@@ -97,7 +97,7 @@
             <h2 class="mb-0">New Arrivals</h2>
             <p class="mb-0">The best assets for you</p>
           </div>
-          <a to="/allweapon" class="text-decoration-none text-white">
+          <a href="/allweapon" class="text-decoration-none text-white">
             View all <i class="fa-solid fa-arrow-right ml-1"></i>
           </a>
         </div>
@@ -149,7 +149,7 @@
       <div class="my-16">
         <div class="d-flex justify-content-between align-center flex-wrap">
           <h2 class="mb-0">Get you favorite skins</h2>
-          <a to="/allweapon" class="text-decoration-none text-white">
+          <a href="/allweapon" class="text-decoration-none text-white">
             View all <i class="fa-solid fa-arrow-right ml-1"></i>
           </a>
         </div>
@@ -177,7 +177,7 @@
       <div class="mt-16">
         <div class="d-flex justify-content-between align-center flex-wrap">
           <h2 class="mb-0">Premium Bundles</h2>
-          <a to="/features" class="text-decoration-none text-white">
+          <a href="/features" class="text-decoration-none text-white">
             View all <i class="fa-solid fa-arrow-right ml-1"></i>
           </a>
         </div>

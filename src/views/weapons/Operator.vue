@@ -1,9 +1,9 @@
 <template>
   <v-container class="mb-16">
-    <b-breadcrumb :items="Spectre" class="mt-5 mb-10"></b-breadcrumb>
+    <b-breadcrumb :items="Operator" class="mt-5 mb-10"></b-breadcrumb>
     <div class="d-flex justify-content-between align-center flex-wrap">
-      <h2 class="mb-0">Spectre</h2>
-      <a to="/allweapon" class="text-decoration-none text-white">
+      <h2 class="mb-0">Operator</h2>
+      <a href="/allweapon" class="text-decoration-none text-white">
         <i class="fa-solid fa-arrow-left mr-1"></i> Back
       </a>
     </div>
@@ -80,13 +80,13 @@
 
 
 <script>
-import { Spectre } from "@/data/Breadcrump";
+import { Operator } from "@/data/Breadcrump";
 import axios from "axios";
 
 export default {
   data() {
     return {
-      Spectre,
+      Operator,
       info: [],
       contentTiers: [],
       currentPage: 1,
@@ -113,7 +113,7 @@ export default {
         const res = await axios.get(`https://valorant-api.com/v1/weapons/skins`);
         if (res.data.status === 200) {
           const filteredData = res.data.data.filter(
-            (item) => item.displayName.includes("Spectre") && item.displayIcon != null
+            (item) => item.displayName.includes("Operator") && item.displayIcon != null
           );
           this.info = filteredData;
         }

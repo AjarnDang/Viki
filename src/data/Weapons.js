@@ -1,27 +1,27 @@
 export const pistol = [
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-classic-sidearm-gun-1.png",
-        link: "#",
+        link: "/classic",
         name: "Classic",
     },
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-shorty-sidearm-weapon.png",
-        link: "#",
+        link: "/shorty",
         name: "Shorty",
     },
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-frenzy-sidearm-weapon.png",
-        link: "#",
+        link: "/frenzy",
         name: "Frenzy",
     },
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-ghost-sidearm-gun.png",
-        link: "#",
+        link: "/ghost",
         name: "Ghost",
     },
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-sheriff-sidearm-gun.png",
-        link: "#",
+        link: "/sheriff",
         name: "Sheriff",
     },
 ];
@@ -29,12 +29,12 @@ export const pistol = [
 export const rifle = [
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-bulldog-gun.png",
-        link: "#",
+        link: "/bulldog",
         name: "Bulldog",
     },
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-guardian-rifle-gun.png",
-        link: "#",
+        link: "/guardian",
         name: "Guardian",
     },
     {
@@ -52,7 +52,7 @@ export const rifle = [
 export const smg = [
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-stinger-smg-gun.png",
-        link: "#",
+        link: "/stinger",
         name: "Stinger",
     },
     {
@@ -65,12 +65,12 @@ export const smg = [
 export const shotgun = [
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-bucky-shotgun.png",
-        link: "#",
+        link: "/bucky",
         name: "Bucky",
     },
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-judge-shotgun.png",
-        link: "#",
+        link: "/judge",
         name: "Judge",
     },
 ];
@@ -78,7 +78,7 @@ export const shotgun = [
 export const sniper = [
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-marshal-sniper-rifle.png",
-        link: "#",
+        link: "/marshal",
         name: "Marshal",
     },
     {
@@ -91,12 +91,12 @@ export const sniper = [
 export const heavy = [
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-ares-heavy-machine-gun.png",
-        link: "#",
+        link: "/ares",
         name: "Ares",
     },
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-odin-heavy-machine-gun.png",
-        link: "#",
+        link: "/odin",
         name: "Odin",
     },
 ];
@@ -104,7 +104,34 @@ export const heavy = [
 export const melee = [
     {
         img: "https://valorantinfo.gg/wp-content/uploads/2021/09/valorant-tactical-knife.png",
-        link: "#",
+        link: "/melee",
         name: "Tactical Knife",
     },
 ];
+
+export const meleeType = [
+    "Knife",
+    "Melee",
+    "Kunai",
+    "Sword",
+    "Hammer",
+    "Gauntlet",
+    "Dagger",
+    "Daggers",
+    "Fan",
+    "Axe",
+    "Bat",
+    "Staff",
+    "Fist",
+    "Karambit",
+    "Blade",
+    "Wrath",
+    "Firefly",
+    "mace",
+    "Anchor",
+    "Scythe",
+    "Drill",
+    "Kunitsuna",
+    "Yaiba",
+    "Butterfly",
+  ];

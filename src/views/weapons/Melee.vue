@@ -1,12 +1,13 @@
 <template>
   <v-container class="mb-16">
-    <b-breadcrumb :items="Phantom" class="mt-5 mb-10"></b-breadcrumb>
+    <b-breadcrumb :items="Melee" class="mt-5 mb-10"></b-breadcrumb>
     <div class="d-flex justify-content-between align-center flex-wrap">
-      <h2 class="mb-0">Phantom</h2>
-      <a to="/allweapon" class="text-decoration-none text-white">
+      <h2 class="mb-0">Melee</h2>
+      <a href="/allweapon" class="text-decoration-none text-white">
         <i class="fa-solid fa-arrow-left mr-1"></i> Back
       </a>
     </div>
+    <!-- <p>Total Fetched Data: {{ info.length }}</p> -->
     <v-row dense class="mt-5">
       <v-col
         lg="4"
@@ -34,21 +35,21 @@
             <div class="card-body p-0 text-white card-weapon-detail">
               <div>
                 <!-- <div
-                  v-if="isValidItem(item)"
-                  class="mb-0 text-primary d-inline-flex justify-content-evenly flex-wrap"
-                >
-                  <div
-                    class="px-3 py-2 my-3 mr-2 bg-dark rounded"
-                    v-for="(chroma, chromaIndex) in item.chromas"
-                    :key="chromaIndex"
+                    v-if="isValidItem(item)"
+                    class="mb-0 text-primary d-inline-flex justify-content-evenly flex-wrap"
                   >
-                    <img
-                      v-if="chroma.fullRender || chroma.displayIcon"
-                      :src="chroma.fullRender || chroma.displayIcon"
-                      width="50"
-                    />
-                  </div>
-                </div> -->
+                    <div
+                      class="px-3 py-2 my-3 mr-2 bg-dark rounded"
+                      v-for="(chroma, chromaIndex) in item.chromas"
+                      :key="chromaIndex"
+                    >
+                      <img
+                        v-if="chroma.fullRender || chroma.displayIcon"
+                        :src="chroma.fullRender || chroma.displayIcon"
+                        width="50"
+                      />
+                    </div>
+                  </div> -->
                 <!-- No Variants -->
                 <!-- <div v-else class="mb-2 text-primary"> </div> -->
                 <div v-if="getContentTier(item.contentTierUuid)">
@@ -62,7 +63,6 @@
                   </p>
                 </div>
                 <h5 class="mb-0">{{ item.displayName }}</h5>
-                
               </div>
             </div>
           </div>
@@ -78,15 +78,15 @@
   </v-container>
 </template>
 
-
 <script>
-import { Phantom } from "@/data/Breadcrump";
+import { Melee } from "@/data/Breadcrump";
+import { meleeType } from "@/data/Weapons";
 import axios from "axios";
 
 export default {
   data() {
     return {
-      Phantom,
+      Melee,
       info: [],
       contentTiers: [],
       currentPage: 1,
@@ -110,17 +110,25 @@ export default {
   methods: {
     async getImage() {
       try {
-        const res = await axios.get(`https://valorant-api.com/v1/weapons/skins`);
+        const res = await axios.get(
+          `https://valorant-api.com/v1/weapons/skins`
+        );
         if (res.data.status === 200) {
-          const filteredData = res.data.data.filter(
-            (item) => item.displayName.includes("Phantom") && item.displayIcon != null
-          );
-          this.info = filteredData;
+          this.info = this.filterData(res.data.data);
         }
       } catch (e) {
         console.log(e);
       }
     },
+
+    filterData(data) {
+      return data.filter(
+        (item) =>
+          meleeType.some((keyword) => item.displayName.includes(keyword)) &&
+          item.displayIcon != null
+      );
+    },
+
     async getContentTiers() {
       try {
         const res = await axios.get(`https://valorant-api.com/v1/contenttiers`);
@@ -133,7 +141,9 @@ export default {
     },
     getContentTier(uuid) {
       const tier = this.contentTiers.find((tier) => tier.uuid === uuid);
-      return tier ? { displayName: tier.displayName, displayIcon: tier.displayIcon } : null;
+      return tier
+        ? { displayName: tier.displayName, displayIcon: tier.displayIcon }
+        : null;
     },
 
     updatePage(page) {
@@ -169,7 +179,6 @@ export default {
   background-color: var(--primary) !important;
   border-color: var(--primary) !important;
   color: var(--white) !important;
-  
 }
 
 .theme--light.v-pagination .v-pagination__item {

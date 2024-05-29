@@ -51,48 +51,6 @@
       <p>Loading...</p>
     </div>
 
-    <!-- <div>
-      <h2 class="mt-16">See also</h2>
-      <v-row v-if="randomFilteredSkins.length > 0">
-        <v-col
-          v-for="(card, index) in randomFilteredSkins"
-          :key="index"
-          lg="3"
-          md="6"
-          sm="6"
-          cols="6"
-        >
-          <a
-            :href="{
-              name: 'weaponDetail',
-              params: { displayName: card.displayName },
-            }"
-            class="text-decoration-none"
-          >
-            <v-card
-              v-if="card.displayIcon"
-              :color="dark"
-              class="card bg-transparent shadow-none border-0 bg-text p-2 card-weapon"
-              height="auto"
-              width="300"
-            >
-              <v-card-text class="px-0 pb-0 pt-5">
-                <v-img
-                  :src="card.displayIcon"
-                  class="w-100 rounded-lg mb-5 mt-3"
-                ></v-img>
-                <div class="card-body p-0 text-white card-weapon-detail">
-                  <h6 class="mb-0 text-secondary">{{ card.displayName }}</h6>
-                </div>
-              </v-card-text>
-            </v-card>
-          </a>
-        </v-col>
-      </v-row>
-      <div v-else>
-        <p>No skins available</p>
-      </div>
-    </div> -->
   </v-container>
 </template>
 

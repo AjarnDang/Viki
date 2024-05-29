@@ -11,7 +11,7 @@
       class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-5 mb-3"
     >
       <h5 class="text-primary mb-0">Vandal</h5>
-      <a to="/vandal" class="text-decoration-none text-white">
+      <a href="/vandal" class="text-decoration-none text-white">
         View all <i class="fa-solid fa-arrow-right ml-1"></i>
       </a>
     </div>
@@ -49,7 +49,7 @@
       class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-16 mb-3"
     >
       <h5 class="text-primary mb-0">Odin</h5>
-      <a to="/odin" class="text-decoration-none text-white">
+      <a href="/odin" class="text-decoration-none text-white">
         View all <i class="fa-solid fa-arrow-right ml-1"></i>
       </a>
     </div>
@@ -87,7 +87,7 @@
       class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-16 mb-3"
     >
       <h5 class="text-primary mb-0">Phantom</h5>
-      <a to="/phantom" class="text-decoration-none text-white">
+      <a href="/phantom" class="text-decoration-none text-white">
         View all <i class="fa-solid fa-arrow-right ml-1"></i>
       </a>
     </div>
@@ -125,7 +125,7 @@
       class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-16 mb-3"
     >
       <h5 class="text-primary mb-0">Operator</h5>
-      <a to="/operator" class="text-decoration-none text-white">
+      <a href="/operator" class="text-decoration-none text-white">
         View all <i class="fa-solid fa-arrow-right ml-1"></i>
       </a>
     </div>
@@ -163,7 +163,7 @@
       class="border-top pt-5 d-flex justify-content-between align-center flex-wrap flex-wrap mt-16 mb-3"
     >
       <h5 class="text-primary mb-0">Spectre</h5>
-      <a to="/spectre" class="text-decoration-none text-white">
+      <a href="/spectre" class="text-decoration-none text-white">
         View all <i class="fa-solid fa-arrow-right ml-1"></i>
       </a>
     </div>

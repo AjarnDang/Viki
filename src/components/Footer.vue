@@ -4,10 +4,10 @@
           <div class="d-flex pt-8 pb-10 justify-content-between flex-wrap">
             <div class="mb-3">
               <p>WEAPONS</p>
-              <a to="/vandal" class="nav-link"> Vandal </a>
-              <a to="/phantom" class="nav-link"> Phantom </a>
-              <a to="/operator" class="nav-link"> Operator </a>
-              <a to="/spectre" class="nav-link"> Spectre </a>
+              <a href="/vandal" class="nav-link"> Vandal </a>
+              <a href="/phantom" class="nav-link"> Phantom </a>
+              <a href="/operator" class="nav-link"> Operator </a>
+              <a href="/spectre" class="nav-link"> Spectre </a>
             </div>
             <div class="mb-3">
               <p>BUNDLES</p>
@@ -25,12 +25,12 @@
               >
                 My Website
               </a>
-              <a to="/contact" class="nav-link"> Contact me </a>
+              <a href="/contact" class="nav-link"> Contact me </a>
             </div>
             <div class="mb-3">
               <p>MEDIA & DATA</p>
-              <a to="/about" class="nav-link"> About </a>
-              <a to="/api" class="nav-link"> APIs </a>
+              <a href="/about" class="nav-link"> About </a>
+              <a href="/api" class="nav-link"> APIs </a>
             </div>
             <div class="mb-3">
               <p>SOCIALS</p>
@@ -79,7 +79,7 @@
                 </a>
               </div>
               <p class="mt-5 mb-3">Get in touch with me at your finger tips.</p>
-              <v-btn class="btn btn-primary px-5" to="/contact">Contact</v-btn>
+              <v-btn class="btn btn-primary px-5" href="/contact">Contact</v-btn>
             </div>
           </div>
           <hr />

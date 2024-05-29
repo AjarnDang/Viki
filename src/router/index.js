@@ -27,27 +27,87 @@ const routes = [
   {
     path: '/odin',
     name: 'Odin',
-    component: () => import('../views/Odin.vue')
+    component: () => import('../views/weapons/Odin.vue')
   },
   {
     path: '/vandal',
     name: 'Vandal',
-    component: () => import('../views/Vandal.vue')
+    component: () => import('../views/weapons/Vandal.vue')
   },
   {
     path: '/phantom',
     name: 'Phantom',
-    component: () => import('../views/Phantom.vue')
+    component: () => import('../views/weapons/Phantom.vue')
   },
   {
     path: '/spectre',
     name: 'Spectre',
-    component: () => import('../views/Spectre.vue')
+    component: () => import('../views/weapons/Spectre.vue')
   },
   {
     path: '/operator',
     name: 'Operator',
-    component: () => import('../views/Operator.vue')
+    component: () => import('../views/weapons/Operator.vue')
+  },
+  {
+    path: '/classic',
+    name: 'Classic',
+    component: () => import('../views/weapons/Classic.vue')
+  },
+  {
+    path: '/shorty',
+    name: 'Shorty',
+    component: () => import('../views/weapons/Shorty.vue')
+  },
+  {
+    path: '/ghost',
+    name: 'Ghost',
+    component: () => import('../views/weapons/Ghost.vue')
+  },
+  {
+    path: '/frenzy',
+    name: 'Frenzy',
+    component: () => import('../views/weapons/Frenzy.vue')
+  },
+  {
+    path: '/sheriff',
+    name: 'Sheriff',
+    component: () => import('../views/weapons/Sheriff.vue')
+  },
+  {
+    path: '/bucky',
+    name: 'Bucky',
+    component: () => import('../views/weapons/Bucky.vue')
+  },
+  {
+    path: '/judge',
+    name: 'Judge',
+    component: () => import('../views/weapons/Judge.vue')
+  },
+  {
+    path: '/stinger',
+    name: 'Stinger',
+    component: () => import('../views/weapons/Stinger.vue')
+  },
+  {
+    path: '/bulldog',
+    name: 'Bulldog',
+    component: () => import('../views/weapons/Bulldog.vue')
+  },
+  {
+    path: '/guardian',
+    name: 'Guardian',
+    component: () => import('../views/weapons/Guardian.vue')
+  },
+  {
+    path: '/ares',
+    name: 'Ares',
+    component: () => import('../views/weapons/Ares.vue')
+  },
+  {
+    path: '/melee',
+    name: 'Melee',
+    component: () => import('../views/weapons/Melee.vue')
   },
   {
     path: '/features',

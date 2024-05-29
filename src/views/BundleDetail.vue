@@ -12,7 +12,7 @@
     >
       <h2>{{ cleanedDisplayName }} Bundle</h2>
       <div>
-        <a to="/allbundle" class="text-decoration-none text-white">
+        <a href="/allbundle" class="text-decoration-none text-white">
           <i class="fa-solid fa-arrow-left mr-1"></i> Back
         </a>
       </div>
