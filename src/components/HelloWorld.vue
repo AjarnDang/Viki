@@ -113,25 +113,34 @@
               v-for="(card, index) in randomFilteredSkins"
               :key="index"
             >
-              <v-card
-                v-if="card.displayIcon"
-                :color="dark"
-                class="pa-8 ma-3 bottom-gradient bg-text"
-                height="auto"
-                width="300"
+              <router-link
+                :to="{
+                  name: 'weaponDetail',
+                  params: { displayName: card.displayName },
+                }"
+                class="text-decoration-none"
               >
-                <v-row class="fill-height" align="center" justify="center">
-                  <v-img
-                    :src="card.displayIcon"
-                    class="w-100 rounded-lg mb-5 mt-3"
-                  ></v-img>
-                  <v-card-text class="px-0 pb-0 pt-5">
-                    <h6 class="mb-0 weapon-name">{{ card.displayName }}</h6>
-                    <!-- <p class="text-primary">1650 VP</p> -->
-                  </v-card-text>
-                </v-row>
-              </v-card>
-              <div v-else></div>
+                <v-card
+                  v-if="card.displayIcon"
+                  :color="dark"
+                  class="pa-8 ma-3 bottom-gradient bg-text"
+                  height="auto"
+                  width="300"
+                >
+                  <v-row class="fill-height" align="center" justify="center">
+                    <v-img
+                      :src="card.displayIcon"
+                      class="w-100 rounded-lg mb-5 mt-3"
+                    ></v-img>
+                    <v-card-text class="px-0 pb-0 pt-5">
+                      <h6 class="mb-0 weapon-name">{{ card.displayName }}</h6>
+                      <!-- <p class="text-primary">1650 VP</p> -->
+                    </v-card-text>
+                  </v-row>
+                </v-card>
+
+                <div v-else></div>
+              </router-link>
             </v-slide-item>
           </v-slide-group>
         </v-sheet>
@@ -151,7 +160,7 @@
             :cols="card.flex"
           >
             <v-card class="rounded-lg">
-              <a :to="card.tagLink" class="text-decoration-none text-white">
+              <a :href="card.tagLink" class="text-decoration-none text-white">
                 <v-img
                   :src="card.src"
                   class="align-end rounded-lg exc-image"

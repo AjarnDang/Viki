@@ -49,7 +49,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import { Bundle } from "@/data/Breadcrump";
 import AllBundles from "@/components/AllBundles";
 import ExclusiveBundles from "@/components/ExclusiveBundles";
@@ -73,26 +72,7 @@ export default {
   data() {
     return {
       Bundle,
-      bundles: [],
     };
-  },
-  mounted() {
-    this.fetchData();
-  },
-  methods: {
-    async fetchData() {
-      try {
-        const [bundleRes] = await Promise.all([
-          axios.get("https://valorant-api.com/v1/bundles"),
-        ]);
-
-        if (bundleRes.data.status === 200) {
-          this.bundles = bundleRes.data.data;
-        }
-      } catch (e) {
-        console.log(e);
-      }
-    },
   },
 };
 </script>

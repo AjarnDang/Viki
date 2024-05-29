@@ -65,7 +65,7 @@
               <li class="nav-item">
                 <a href="/allBundle" class="nav-link">Bundles</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a
                   href="https://banny.vercel.app/"
                   target="_blank"
@@ -73,7 +73,7 @@
                   >About me
                   <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i
                 ></a>
-              </li>
+              </li> -->
             </ul>
             <div class="d-flex">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">

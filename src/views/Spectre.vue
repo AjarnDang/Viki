@@ -33,7 +33,7 @@
             />
             <div class="card-body p-0 text-white card-weapon-detail">
               <div>
-                <div
+                <!-- <div
                   v-if="isValidItem(item)"
                   class="mb-0 text-primary d-inline-flex justify-content-evenly flex-wrap"
                 >
@@ -48,9 +48,21 @@
                       width="50"
                     />
                   </div>
+                </div> -->
+                <!-- No Variants -->
+                <!-- <div v-else class="mb-2 text-primary"> </div> -->
+                <div v-if="getContentTier(item.contentTierUuid)">
+                  <p class="text-secondary d-flex align-items-center mt-2 mb-1">
+                    <img
+                      :src="getContentTier(item.contentTierUuid)?.displayIcon"
+                      width="20"
+                      class="mr-2"
+                    />
+                    {{ getContentTier(item.contentTierUuid)?.displayName }}
+                  </p>
                 </div>
-                <div v-else class="mb-0 text-primary">No Varients</div>
                 <h5 class="mb-0">{{ item.displayName }}</h5>
+                
               </div>
             </div>
           </div>
@@ -66,6 +78,7 @@
   </v-container>
 </template>
 
+
 <script>
 import { Spectre } from "@/data/Breadcrump";
 import axios from "axios";
@@ -75,6 +88,7 @@ export default {
     return {
       Spectre,
       info: [],
+      contentTiers: [],
       currentPage: 1,
       itemsPerPage: 21, // Number of items per page
     };
@@ -89,20 +103,17 @@ export default {
       return this.info.slice(start, end);
     },
   },
-  mounted() {
+  async mounted() {
     this.getImage();
+    this.getContentTiers();
   },
   methods: {
     async getImage() {
       try {
-        const res = await axios.get(
-          `https://valorant-api.com/v1/weapons/skins`
-        );
+        const res = await axios.get(`https://valorant-api.com/v1/weapons/skins`);
         if (res.data.status === 200) {
           const filteredData = res.data.data.filter(
-            (item) =>
-              item.displayName.includes("Spectre") && 
-              item.displayIcon != null
+            (item) => item.displayName.includes("Spectre") && item.displayIcon != null
           );
           this.info = filteredData;
         }
@@ -110,6 +121,21 @@ export default {
         console.log(e);
       }
     },
+    async getContentTiers() {
+      try {
+        const res = await axios.get(`https://valorant-api.com/v1/contenttiers`);
+        if (res.data.status === 200) {
+          this.contentTiers = res.data.data;
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    },
+    getContentTier(uuid) {
+      const tier = this.contentTiers.find((tier) => tier.uuid === uuid);
+      return tier ? { displayName: tier.displayName, displayIcon: tier.displayIcon } : null;
+    },
+
     updatePage(page) {
       this.currentPage = page;
     },
