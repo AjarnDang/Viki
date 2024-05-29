@@ -15,7 +15,7 @@
           >
             <router-link
               class="links"
-              :to="{
+              :href="{
                 name: 'BundleDetail',
                 params: { displayName: item.displayName },
               }"
@@ -114,7 +114,7 @@
               :key="index"
             >
               <router-link
-                :to="{
+                :href="{
                   name: 'weaponDetail',
                   params: { displayName: card.displayName },
                 }"
@@ -184,7 +184,7 @@
         <v-row dense class="mt-5">
           <v-col v-if="randomBundle" :key="randomBundle.uuid" :cols="12">
             <router-link
-              :to="{
+              :href="{
                 name: 'BundleDetail',
                 params: { displayName: randomBundle.displayName },
               }"
@@ -207,7 +207,7 @@
           </v-col>
           <v-col v-for="item in randomBundles" :key="item.uuid" :cols="6">
             <router-link
-              :to="{
+              :href="{
                 name: 'BundleDetail',
                 params: { displayName: item.displayName },
               }"

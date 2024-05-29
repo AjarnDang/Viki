@@ -62,7 +62,6 @@
                   </p>
                 </div>
                 <h5 class="mb-0">{{ item.displayName }}</h5>
-                
               </div>
             </div>
           </div>
@@ -77,7 +76,6 @@
     ></v-pagination>
   </v-container>
 </template>
-
 
 <script>
 import { Spectre } from "@/data/Breadcrump";
@@ -110,10 +108,13 @@ export default {
   methods: {
     async getImage() {
       try {
-        const res = await axios.get(`https://valorant-api.com/v1/weapons/skins`);
+        const res = await axios.get(
+          `https://valorant-api.com/v1/weapons/skins`
+        );
         if (res.data.status === 200) {
           const filteredData = res.data.data.filter(
-            (item) => item.displayName.includes("Spectre") && item.displayIcon != null
+            (item) =>
+              item.displayName.includes("Spectre") && item.displayIcon != null
           );
           this.info = filteredData;
         }
@@ -133,7 +134,9 @@ export default {
     },
     getContentTier(uuid) {
       const tier = this.contentTiers.find((tier) => tier.uuid === uuid);
-      return tier ? { displayName: tier.displayName, displayIcon: tier.displayIcon } : null;
+      return tier
+        ? { displayName: tier.displayName, displayIcon: tier.displayIcon }
+        : null;
     },
 
     updatePage(page) {
@@ -169,7 +172,6 @@ export default {
   background-color: var(--primary) !important;
   border-color: var(--primary) !important;
   color: var(--white) !important;
-  
 }
 
 .theme--light.v-pagination .v-pagination__item {

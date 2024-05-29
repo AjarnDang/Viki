@@ -22,7 +22,7 @@
         >
           <router-link
             class="links"
-            :to="{
+            :href="{
               name: 'BundleDetail',
               params: { displayName: item.displayName },
             }"
@@ -81,7 +81,7 @@
         <v-slide-item v-for="(item, index) in vctBundles" :key="index">
           <router-link
             class="links"
-            :to="{
+            :href="{
               name: 'BundleDetail',
               params: { displayName: item.displayName },
             }"
@@ -121,7 +121,7 @@
       >
         <router-link
           class="links"
-          :to="{
+          :href="{
             name: 'BundleDetail',
             params: { displayName: bundle.displayName },
           }"

@@ -156,6 +156,7 @@ pre code a {
 
 .card-weapon img {
   max-height: 20vh;
+  height: auto;
   object-fit: contain;
 }
 
@@ -377,6 +378,10 @@ footer a.nav-link i:hover {
 @media screen and (max-width: 992px) { 
   .exc-image {
     height: 300px;
+  }
+
+  .card-weapon {
+    min-height: 30vh;
   }
  }
 
