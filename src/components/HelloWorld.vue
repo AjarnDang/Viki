@@ -360,9 +360,6 @@ export default {
           item.displayName.includes("Ignite")
       );
     },
-    randomBundle() {
-      return this.selectedBundle;
-    },
     randomBundles() {
       return this.randomExclusiveBundles(this.selectedBundle);
     },

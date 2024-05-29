@@ -1,7 +1,7 @@
 <template>
   <v-container class="mb-16">
     <b-breadcrumb class="mt-5 mb-10">
-      <b-breadcrumb-item to="/">Home</b-breadcrumb-item>
+      <b-breadcrumb-item href="/">Home</b-breadcrumb-item>
       <b-breadcrumb-item href="/allbundle">Bundle</b-breadcrumb-item>
       <b-breadcrumb-item active
         >{{ cleanedDisplayName }} Bundle</b-breadcrumb-item
