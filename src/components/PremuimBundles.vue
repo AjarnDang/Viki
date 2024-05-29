@@ -5,7 +5,7 @@
         cols="6"
         sm="6"
         md="4"
-        v-for="(item, index) in allBundles"
+        v-for="(item, index) in deluxeBundles"
         :key="index"
       >
         <router-link
@@ -42,6 +42,8 @@ export default {
   data() {
     return {
       bundles: [],
+      skins: [],
+      contentTiers: [],
       currentPage: 1,
       itemsPerPage: 21,
     };
@@ -76,25 +78,64 @@ export default {
     },
   },
   computed: {
-    allBundles() {
+    deluxeBundles() {
+      const deluxeBundleName = [
+        "Xenohunter",
+        "Neptune",
+        "Origin",
+        "Radiant Crisis 001",
+        "Forsaken",
+        "Soulstrife",
+        "Elderflame",
+        "Prime",
+        "Black.Market",
+        "Magepunk",
+        "Valiant Hero",
+        "Crimsonbeast",
+        "Ion",
+        "Oni",
+        "Cryostasis",
+        "Gravitational Uranium Neuroblaster",
+        "Reaver",
+        "Recon",
+        "Prime",
+        "Prime//2.0",
+      ];
+      const deluxeBundles = this.bundles.filter((bundle) =>
+        deluxeBundleName.includes(bundle.displayName)
+      );
       const start = (this.currentPage - 1) * this.itemsPerPage;
       const end = start + this.itemsPerPage;
-      return this.bundles.slice(start, end);
+      return deluxeBundles.slice(start, end);
     },
     totalPages() {
-      return Math.ceil(this.bundles.length / this.itemsPerPage);
+      const deluxeBundleName = [
+        "Xenohunter",
+        "Neptune",
+        "Origin",
+        "Radiant Crisis 001",
+        "Forsaken",
+        "Soulstrife",
+        "Elderflame",
+        "Prime",
+        "Black.Market",
+        "Magepunk",
+        "Valiant Hero",
+        "Crimsonbeast",
+        "Ion",
+        "Oni",
+        "Cryostasis",
+        "Gravitational Uranium Neuroblaster",
+        "Reaver",
+        "Recon",
+        "Prime",
+        "Prime//2.0",
+      ];
+      const deluxeBundles = this.bundles.filter((bundle) =>
+        deluxeBundleName.includes(bundle.displayName)
+      );
+      return Math.ceil(deluxeBundles.length / this.itemsPerPage);
     },
   },
 };
 </script>
-
-<style>
-.v-tabs:not(.v-tabs--vertical):not(.v-tabs--right) > .v-slide-group--is-overflowing.v-tabs-bar--is-mobile:not(.v-slide-group--has-affixes) .v-slide-group__prev {
-  display: none !important;
-}
-
-.v-slide-group__wrapper {
-  box-shadow: inset 25px 0px 25px -25px rgba(0,0,0,0.45), 
-              inset -25px 0px 25px -25px rgba(0,0,0,0.45);
-}
-</style>

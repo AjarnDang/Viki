@@ -101,7 +101,8 @@ export default {
         if (res.data.status === 200) {
           const filteredData = res.data.data.filter(
             (item) =>
-              item.displayName.includes("Spectre") && item.displayIcon != null
+              item.displayName.includes("Spectre") && 
+              item.displayIcon != null
           );
           this.info = filteredData;
         }

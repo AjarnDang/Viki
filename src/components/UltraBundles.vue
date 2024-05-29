@@ -20,7 +20,11 @@
             class="rounded-lg w-100"
             height="200"
           ></v-img>
-          <p class="mt-3 text-secondary">{{ item.displayName }} Bundle</p>
+          <h6 class="mt-3 mb-0 text-secondary">{{ item.displayName }} Bundle</h6>
+          <div class="mt-1 d-flex align-content-center">
+            <!-- <img :src="item.tierIcon" class="tier-icon mr-2" alt="Tier Icon" width="20" /> 
+            <span class="text-secondary">{{ item.tier }}</span> -->
+          </div>
         </router-link>
       </v-col>
     </v-row>
@@ -35,8 +39,7 @@
   </div>
 </template>
 
-<script>
-import axios from "axios";
+<script>import axios from "axios";
 
 export default {
   data() {
@@ -76,6 +79,38 @@ export default {
     changePage(page) {
       this.currentPage = page;
     },
+    getTierInfo(displayName) {
+      let tierInfo = { name: "Unknown Edition", icon: "" };
+      const ultraBundleNames = [
+        "RGX 11z Pro",
+        "Araxys",
+        "Spectrum",
+        "Glitchpop",
+        "ChronoVoid",
+        "Prelude to Chaos",
+        "Radiant Entertainment System",
+        "Gaia's Vengeance",
+        "Elderflame",
+        "Imperium",
+        "Singularity",
+        "Neo Frontier",
+        "Primordium",
+        "Ruination",
+        "Overdrive",
+        "Kuronami",
+        "Sentinels of Light",
+        "Sovereign",
+        "Mystbloom",
+        "BlastX",
+        "Protocol 781-A",
+      ];
+
+      if (ultraBundleNames.includes(displayName)) {
+        tierInfo = this.contentTiers.find(tier => tier.displayName === "Ultra Edition") || tierInfo;
+      }
+
+      return { name: tierInfo.displayName, icon: tierInfo.displayIcon };
+    },
   },
   computed: {
     premiumBundles() {
@@ -102,9 +137,18 @@ export default {
         "BlastX",
         "Protocol 781-A",
       ];
-      return this.bundles.filter((bundle) =>
-        premiumBundleName.includes(bundle.displayName)
-      );
+      return this.bundles
+        .filter((bundle) =>
+          premiumBundleName.includes(bundle.displayName)
+        )
+        .map((bundle) => {
+          const tierInfo = this.getTierInfo(bundle.displayName);
+          return {
+            ...bundle,
+            tier: tierInfo.name,
+            tierIcon: tierInfo.icon,
+          };
+        });
     },
     paginatedPremiumBundles() {
       const start = (this.currentPage - 1) * this.itemsPerPage;
@@ -116,4 +160,5 @@ export default {
     },
   },
 };
+
 </script>

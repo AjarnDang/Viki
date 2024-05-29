@@ -11,9 +11,10 @@
     <v-tabs dark class="rounded-lg">
       <v-tab> All Bundles </v-tab>
       <v-tab> Exclusive Edition </v-tab>
-      <v-tab> Premium Edition </v-tab>
+      <v-tab> Ultra Edition </v-tab>
+      <v-tab> Premium Bundles </v-tab>
       <v-tab> Deluxe Bundles </v-tab>
-      <v-tab> Select Bundles </v-tab>
+      <!-- <v-tab> Select Bundles </v-tab> -->
       <v-tab> Give/Run Back </v-tab>
 
       <v-tab-item class="mt-6">
@@ -25,16 +26,20 @@
       </v-tab-item>
 
       <v-tab-item class="mt-6">
-        <PremiumBundles />
+        <UltraBundles />
+      </v-tab-item>
+
+      <v-tab-item class="mt-6">
+        <PremuimBundles />
       </v-tab-item>
 
       <v-tab-item class="mt-6">
         <DeluxeBundles />
       </v-tab-item>
 
-      <v-tab-item class="mt-6">
+      <!-- <v-tab-item class="mt-6">
         <SelectBundles />
-      </v-tab-item>
+      </v-tab-item> -->
 
       <v-tab-item class="mt-6">
         <RunbackBundles />
@@ -48,19 +53,21 @@ import axios from "axios";
 import { Bundle } from "@/data/Breadcrump";
 import AllBundles from "@/components/AllBundles";
 import ExclusiveBundles from "@/components/ExclusiveBundles";
-import PremiumBundles from "@/components/PremiumBundles";
+import UltraBundles from "@/components/UltraBundles";
+import PremuimBundles from "@/components/PremuimBundles.vue";
 import DeluxeBundles from "@/components/DeluxeBundles";
-import SelectBundles from "@/components/SelectBundles";
-import RunbackBundles from "@/components/RunbackBundles";
+import RunbackBundles from "@/components/RunbackBundles.vue";
+// import SelectBundles from "@/components/SelectBundles";
 
 export default {
   name: "AllProduct",
   components: {
     AllBundles,
     ExclusiveBundles,
-    PremiumBundles,
+    UltraBundles,
+    PremuimBundles,
     DeluxeBundles,
-    SelectBundles,
+    // SelectBundles,
     RunbackBundles,
   },
   data() {
@@ -113,7 +120,6 @@ export default {
   background-color: var(--primary) !important;
   border-color: var(--primary) !important;
   color: var(--white) !important;
-  
 }
 
 .theme--light.v-pagination .v-pagination__item {
@@ -124,5 +130,4 @@ export default {
 .theme--light.v-pagination .v-pagination__navigation {
   background: var(--gray);
 }
-
 </style>

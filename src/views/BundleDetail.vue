@@ -33,22 +33,30 @@
         v-for="(skin, index) in matchingSkins"
         :key="index"
       >
-        <div class="card bg-transparent shadow-none bg-text p-4 card-weapon">
-          <img
-            :src="skin.displayIcon"
-            class="white--text align-end mt-2 mb-5"
-            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-            height="auto"
-            width="100%"
-          />
+        <router-link
+          :to="{
+            name: 'weaponDetail',
+            params: { displayName: skin.displayName },
+          }"
+          class="text-decoration-none"
+        >
+          <div class="card bg-transparent shadow-none bg-text p-4 card-weapon">
+            <img
+              :src="skin.displayIcon"
+              class="white--text align-end mt-2 mb-5"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+              height="auto"
+              width="100%"
+            />
 
-          <div class="card-body p-0 text-white card-weapon-detail">
-            <div>
-              <h5 class="mb-0">{{ skin.displayName }}</h5>
-              <!-- <p class="mb-0 text-primary">1650 VP</p> -->
+            <div class="card-body p-0 text-white card-weapon-detail">
+              <div>
+                <h5 class="mb-0">{{ skin.displayName }}</h5>
+                <!-- <p class="mb-0 text-primary">1650 VP</p> -->
+              </div>
             </div>
           </div>
-        </div>
+        </router-link>
       </v-col>
     </v-row>
 

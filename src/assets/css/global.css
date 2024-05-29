@@ -219,33 +219,6 @@ footer a.nav-link i:hover {
   align-items: center;
 }
 
-.image-gallerry {
-  display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  grid-template-rows: repeat(4, 1fr);
-}
-
-.image-gallerry .item {
-  width: auto;
-  margin: 5px;
-  color: var(--white);
-}
-
-.image-gallerry .item img {
-  width: 100%;
-  border-radius: var(--border-main);
-}
-
-.image-gallerry .item:nth-of-type(1) {
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-}
-
-.image-gallerry .item:nth-of-type(10) {
-  grid-column: 3 / span 2;
-  grid-row: 3 / span 2;
-}
-
 /* .weapon-name {
   position: absolute;
   bottom: 1rem;
