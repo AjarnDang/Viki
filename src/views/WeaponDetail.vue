@@ -3,7 +3,9 @@
     <b-breadcrumb class="mt-5 mb-10">
       <b-breadcrumb-item href="/">Home</b-breadcrumb-item>
       <b-breadcrumb-item href="/allweapon">Weapon</b-breadcrumb-item>
-      <b-breadcrumb-item :href="breadcrumbLink">{{ lastWord }}</b-breadcrumb-item>
+      <b-breadcrumb-item :href="breadcrumbLink">{{
+        lastWord
+      }}</b-breadcrumb-item>
       <b-breadcrumb-item active>{{ weapon?.displayName }}</b-breadcrumb-item>
     </b-breadcrumb>
     <h2 class="mb-5">{{ weapon?.displayName }}</h2>
@@ -27,17 +29,15 @@
               class="card bg-transparent shadow-none border-0 bg-text p-2 card-weapon"
               @click="handleItemClick(chroma)"
             >
+              <img
+                v-if="chroma.fullRender || chroma.displayIcon"
+                :src="chroma.fullRender || chroma.displayIcon"
+                class="mt-2 mb-5"
+                height="auto"
+                width="100%"
+              />
               <div class="card-body p-0 text-white card-weapon-detail">
                 <div>
-                  <div>
-                  <img
-                    v-if="chroma.fullRender || chroma.displayIcon"
-                    :src="chroma.fullRender || chroma.displayIcon"
-                    class="mt-2 mb-5"
-                    height="auto"
-                    width="100%"
-                  />
-                </div>
                   <h6 class="mb-0 text-secondary">
                     {{ chroma.displayName }}
                   </h6>

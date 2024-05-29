@@ -151,7 +151,7 @@ pre code a {
 
 .card-weapon {
   height: auto;
-  min-height: 40vh;
+  height: 40vh;
 }
 
 .card-weapon img {
@@ -372,6 +372,9 @@ footer a.nav-link i:hover {
 
 /* // Medium devices (tablets, 768px and up) */
 @media screen and (max-width: 768px) { 
+  .card-weapon {
+    height: 20vh;
+  }
  }
 
 /* // Large devices (desktops, 992px and up) */
@@ -381,7 +384,7 @@ footer a.nav-link i:hover {
   }
 
   .card-weapon {
-    min-height: 30vh;
+    height: 30vh;
   }
  }
 
