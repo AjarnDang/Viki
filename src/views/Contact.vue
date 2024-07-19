@@ -13,7 +13,7 @@
         <CardSocialVue />
       </v-col>
       <v-col lg="6" md="6" sm="12" cols="12" class="d-flex justify-content-end">
-        <img src="../assets/img/me-2.png" alt="Hero Image" width="90%" />
+        <img src="../assets/img/me-2.png" alt="Hero Image" width="90%" class="object-fit-contain"/>
       </v-col>
     </v-row>
   </v-container>
