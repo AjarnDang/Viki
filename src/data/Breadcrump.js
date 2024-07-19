@@ -261,6 +261,42 @@ export const Stinger = [
   },
 ];
 
+export const Bucky = [
+  {
+    text: 'Home',
+    disabled: false,
+    to: '/',
+  },
+  {
+    text: 'Weapon',
+    disabled: false,
+    to: '/allweapon',
+  },
+  {
+    text: 'Bucky',
+    disabled: true,
+    to: '/bucky',
+  },
+];
+
+export const Judge = [
+  {
+    text: 'Home',
+    disabled: false,
+    to: '/',
+  },
+  {
+    text: 'Weapon',
+    disabled: false,
+    to: '/allweapon',
+  },
+  {
+    text: 'Judge',
+    disabled: true,
+    to: '/judge',
+  },
+];
+
 export const Bulldog = [
   {
     text: 'Home',

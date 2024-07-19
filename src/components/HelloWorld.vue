@@ -15,7 +15,7 @@
           >
             <router-link
               class="links"
-              :href="{
+              :to="{
                 name: 'BundleDetail',
                 params: { displayName: item.displayName },
               }"
@@ -114,7 +114,7 @@
               :key="index"
             >
               <router-link
-                :href="{
+                :to="{
                   name: 'weaponDetail',
                   params: { displayName: card.displayName },
                 }"
@@ -184,7 +184,7 @@
         <v-row dense class="mt-5">
           <v-col v-if="randomBundle" :key="randomBundle.uuid" :cols="12">
             <router-link
-              :href="{
+              :to="{
                 name: 'BundleDetail',
                 params: { displayName: randomBundle.displayName },
               }"
@@ -207,7 +207,7 @@
           </v-col>
           <v-col v-for="item in randomBundles" :key="item.uuid" :cols="6">
             <router-link
-              :href="{
+              :to="{
                 name: 'BundleDetail',
                 params: { displayName: item.displayName },
               }"
@@ -251,7 +251,7 @@
           </div>
           <div class="col-lg-5 col-md-6 col-sm-12 mb-4 text-center">
             <img
-              src="https://playvalorant.com/static/agents-group-31d7ce5a3637e45d8b25d2fd03159e6c.png"
+              src="https://pbs.twimg.com/media/GLZS87Oa0AAIs9m.png"
               class="w-100"
             />
           </div>

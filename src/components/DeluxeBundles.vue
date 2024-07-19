@@ -10,7 +10,7 @@
         >
           <router-link
             class="links"
-            :href="{
+            :to="{
               name: 'BundleDetail',
               params: { displayName: item.displayName },
             }"

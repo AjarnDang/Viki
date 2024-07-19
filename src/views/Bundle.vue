@@ -27,7 +27,7 @@
             >
               <router-link
                 class="links"
-                :href="{
+                :to="{
                   name: 'BundleDetail',
                   params: { displayName: item.displayName },
                 }"
@@ -54,7 +54,7 @@
             >
               <router-link
                 class="links"
-                :href="{
+                :to="{
                   name: 'BundleDetail',
                   params: { displayName: item.displayName },
                 }"
@@ -81,7 +81,7 @@
             >
               <router-link
                 class="links"
-                :href="{
+                :to="{
                   name: 'BundleDetail',
                   params: { displayName: item.displayName },
                 }"
@@ -108,7 +108,7 @@
             >
               <router-link
                 class="links"
-                :href="{
+                :to="{
                   name: 'BundleDetail',
                   params: { displayName: item.displayName },
                 }"
@@ -135,7 +135,7 @@
             >
               <router-link
                 class="links"
-                :href="{
+                :to="{
                   name: 'BundleDetail',
                   params: { displayName: item.displayName },
                 }"
@@ -162,7 +162,7 @@
             >
               <router-link
                 class="links"
-                :href="{
+                :to="{
                   name: 'BundleDetail',
                   params: { displayName: item.displayName },
                 }"
@@ -177,6 +177,7 @@
             </v-col>
           </v-row>
         </v-tab-item>
+        
       </v-tabs>
     </v-container>
   </template>

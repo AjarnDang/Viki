@@ -34,7 +34,7 @@
         :key="index"
       >
         <router-link
-          :href="{
+          :to="{
             name: 'weaponDetail',
             params: { displayName: skin.displayName },
           }"
